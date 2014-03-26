@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 public class Node {
 
 	private int id;
@@ -23,6 +23,8 @@ public class Node {
 			case underground:
 				ugEdges.add(n);
 				break;
+			default:
+				throw new IllegalArgumentException();
 		}
 	}
 
@@ -37,9 +39,11 @@ public class Node {
 			case taxi:
 				return taxiEdges;
 			case bus:
-				retrun busEdges;
+				return busEdges;
 			case underground:
 				return ugEdges;
+			default:
+				throw new IllegalArgumentException();
 		}
 	}
 }
