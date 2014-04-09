@@ -1,0 +1,1 @@
+public enum TransportType {bus, taxi, underground};
