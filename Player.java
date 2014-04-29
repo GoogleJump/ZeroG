@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class Player {
-	private String name;
-	private int id;
-	private int[] tickets;
-	private Node location;
-	private LinkedList<Node> moveLog;
+	protected String name;
+	protected int id;
+	protected int[] tickets;
+	protected Node location;
+	protected List<Node> moveLog;
 	
 	public Player(String name, int id){
 		this.name = name;
