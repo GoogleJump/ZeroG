@@ -14,7 +14,26 @@ public class Player {
 	}
 	
 	public boolean move(){
-		
+		switch () {
+		case taxi:
+			if (this.tickets[0] == 0)
+				move = false;
+			else
+				this.tickets[0]--;
+			break;
+		case bus:
+			if (this.tickets[1]= 0)
+				move = false;
+			else
+				this.tickets[1]--;
+			break;
+		case underground:
+			if (this.tickets[2] == 0)
+				move = false;
+			else
+				this.tickets[2]--;
+		}
+
 	}
 	
 	public Node getLocation(){
