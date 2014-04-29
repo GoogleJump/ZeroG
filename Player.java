@@ -13,8 +13,21 @@ public class Player {
 		this.moveLog = new LinkedList<String>();
 	}
 	
-	public boolean move(){
-		
+	//This method is only called if the move is valid
+	//GameController class will check if there are enough tickets
+	public boolean move(Node n, TransportType ticket){
+		switch (ticket) {
+		case taxi:
+			tickets[0]--;
+			break;
+		case bus:
+			tickets[1]--;
+			break;
+		case underground:
+			tickets[2]--;
+			break;
+		}
+		setLocation(n);
 	}
 	
 	public Node getLocation(){
