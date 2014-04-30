@@ -13,8 +13,8 @@ public class Player {
 		this.moveLog = new LinkedList<String>();
 	}
 	
-	public boolean move(){
-		switch () {
+	public boolean move(Node n, TransportType Type){
+		switch (Type) {
 		case taxi:
 			if (this.tickets[0] == 0)
 				move = false;
