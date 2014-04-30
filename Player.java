@@ -13,7 +13,18 @@ public class Player {
 		this.moveLog = new LinkedList<String>();
 	}
 	
-	public boolean move(){
+	public boolean move(Node n, TransportType Type){
+		switch (Type) {
+		case taxi:
+			this.tickets[0]--;
+			break;
+		case bus:
+			this.tickets[1]--;
+			break;
+		case underground:
+			this.tickets[2]--;
+		setLocation(n);
+		}
 		
 	}
 	
