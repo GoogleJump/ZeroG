@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class Player {
-	private String name;
-	private int id;
-	private int[] tickets;
-	private Node location;
-	private LinkedList<Node> moveLog;
+	protected String name;
+	protected int id;
+	protected int[] tickets;
+	protected Node location;
+	protected List<Node> moveLog;
 	
 	public Player(String name, int id){
 		this.name = name;
@@ -13,19 +13,21 @@ public class Player {
 		this.moveLog = new LinkedList<String>();
 	}
 	
-	public boolean move(Node n, TransportType Type){
-		switch (Type) {
+	//This method is only called if the move is valid
+	//GameController class will check if there are enough tickets
+	public boolean move(Node n, TransportType ticket){
+		switch (ticket) {
 		case taxi:
-			this.tickets[0]--;
+			tickets[0]--;
 			break;
 		case bus:
-			this.tickets[1]--;
+			tickets[1]--;
 			break;
 		case underground:
-			this.tickets[2]--;
-		setLocation(n);
+			tickets[2]--;
+			break;
 		}
-		
+		setLocation(n);
 	}
 	
 	public Node getLocation(){
