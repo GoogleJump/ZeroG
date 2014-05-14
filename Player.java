@@ -28,7 +28,6 @@ public class Player {
 			break;
 		}
 		setLocation(n);
-
 	}
 	
 	public Node getLocation(){
