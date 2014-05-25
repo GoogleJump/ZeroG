@@ -1,7 +1,7 @@
 package zerog_scotlandyard;
-public class PlayerId {
+public class PlayerID {
 	private int id;
-	PlayerId (int id){
+	PlayerID(int id){
 		this.id = id;
 	}
 }
