@@ -6,12 +6,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class GameLogic {
-	static Map<PlayerId, Player> players = new HashMap<PlayerId, Player>();
+	static Map<PlayerID, Player> players = new HashMap<PlayerID, Player>();
 	static Set<Node> gameBoard;
 	//manually game board graph here
 
 	public boolean canMove (Player player) {
-		boolean enoughTicketsToMoveSomeplace = false;
 		Set<Node> allPossibleMoveLocations = player.getLocation().getAllEdges();
 		Set<Node> allOtherPlayerLocations = getAllOtherPlayerLocations(player);
 		allPossibleMoveLocations.removeAll(allOtherPlayerLocations);
@@ -25,14 +24,12 @@ public class GameLogic {
 			Set<TransportType> connectionTypes = getPossibleConnectionTypes(player.getLocation(), adjacentLocation);
 			for(TransportType transportType : connectionTypes){
 				if(playerHasEnoughTickets(player, transportType)){
-					enoughTicketsToMoveSomeplace = true;
-					break;
-
+					return true;
 				}
 			}
 		}
-
-		return (enoughTicketsToMoveSomeplace && !playerBlocked);
+		//Player does not have enough tickets
+		return false;
 	}
 
 
