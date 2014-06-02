@@ -105,6 +105,8 @@ public class ScotlandYardTest{
 				edgeMap.get(id1).get(transport).add(nodes[id2]);
 				edgeMap.get(id2).get(transport).add(nodes[id1]);
 			}
+			id1 = 0;
+			id2 = 0;
 		}
 		
 		for(int i = 0; i < numNodes; i++){
