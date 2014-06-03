@@ -14,7 +14,6 @@ public class SettingsScreen implements Screen {
 	
 	final ScotlandYardGame game;
 	final TextButtonStyle textButtonStyle;
-	final MainMenuScreen mainMenu;
 	Stage stage;
 	
 	final int numOfDetectivesSBXPos = 200;
@@ -23,18 +22,16 @@ public class SettingsScreen implements Screen {
 	final int settingsBtnXPos = 500;
 	final int settingsBtnYPos = 200;
 
-	public SettingsScreen(final ScotlandYardGame game, TextButtonStyle textButtonStyle, MainMenuScreen mainMenu) {
+	public SettingsScreen(final ScotlandYardGame game, TextButtonStyle textButtonStyle) {
 		this.game = game;
 		this.stage = new Stage();
 		this.textButtonStyle = textButtonStyle;
-		this.mainMenu = mainMenu;
 		create();
 	}
 
 
 	private void create() {
 		Gdx.input.setInputProcessor(stage);
-           
         final TextButton mainMenuBtn = new TextButton("Main Menu", textButtonStyle);
         mainMenuBtn.setPosition(settingsBtnXPos, settingsBtnYPos);
         
@@ -44,7 +41,7 @@ public class SettingsScreen implements Screen {
         
         mainMenuBtn.addListener(new ChangeListener() {
             public void changed (ChangeEvent event, Actor actor) {
-                game.setScreen(mainMenu);
+                game.setScreen(new MainMenuScreen(game,textButtonStyle));
             }
         });
 	}
@@ -61,13 +58,11 @@ public class SettingsScreen implements Screen {
 	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
-
+		// TODO Auto-generated method stub	
 	}
 
 	@Override
@@ -79,18 +74,16 @@ public class SettingsScreen implements Screen {
 	@Override
 	public void pause() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void resume() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void dispose() {
-		stage.dispose();
+		// TODO dispose objects here, call in hide()?
 	}
 
 }

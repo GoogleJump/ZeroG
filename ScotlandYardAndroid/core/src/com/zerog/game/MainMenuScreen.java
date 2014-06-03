@@ -13,7 +13,6 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 public class MainMenuScreen implements Screen {
 
 	final ScotlandYardGame game;
-	final SettingsScreen settingsScreen;
 	Stage stage;
 	
 	final int playBtnXPos = 200;
@@ -26,17 +25,15 @@ public class MainMenuScreen implements Screen {
 	TextButton settingsBtn;
 	TextButtonStyle textButtonStyle;
 	
-	public MainMenuScreen(final ScotlandYardGame game, final TextButtonStyle textButtonStyle, final SettingsScreen settingsScreen){
+	public MainMenuScreen(final ScotlandYardGame game, final TextButtonStyle textButtonStyle){
 		this.game = game;
 		this.stage = new Stage();
 		this.textButtonStyle = textButtonStyle;
-		this.settingsScreen = settingsScreen;
 		create();
 	}
 	
 	public void create(){
 		Gdx.input.setInputProcessor(stage);
-
         playBtn = new TextButton("Play", textButtonStyle);
         playBtn.setPosition(playBtnXPos, playBtnYPos);
         
@@ -46,8 +43,6 @@ public class MainMenuScreen implements Screen {
         stage.addActor(playBtn);
         stage.addActor(settingsBtn);
         
-
-        
         playBtn.addListener(new ChangeListener() {
             public void changed (ChangeEvent event, Actor actor) {
                 //game.setScreen( new GameScreen());
@@ -56,13 +51,12 @@ public class MainMenuScreen implements Screen {
         
         settingsBtn.addListener(new ChangeListener() {
             public void changed (ChangeEvent event, Actor actor) {
-            	Gdx.app.log("MyTag", "clicked");
-                game.setScreen(settingsScreen);
+                game.setScreen(new SettingsScreen(game, textButtonStyle));
             }
         });
+        
 	}
 	
-
 
 	@Override
 	public void render(float delta) {
@@ -76,35 +70,31 @@ public class MainMenuScreen implements Screen {
 	@Override
 	public void resize(int width, int height) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void show() {
-        settingsBtn.setChecked(false);
+		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void hide() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void pause() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void resume() {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void dispose() {
-		stage.dispose();
+		// TODO dispose objects here, call in hide()?
 	}
 
 }
