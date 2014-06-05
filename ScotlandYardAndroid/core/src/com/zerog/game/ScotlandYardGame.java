@@ -15,6 +15,9 @@ public class ScotlandYardGame extends Game {
 	BitmapFont font;
 	Skin skin;
 	
+	public MainMenuScreen mainMenuScreen;
+	public SettingsScreen settingsScreen;
+	
 	
 	@Override
 	public void create () {
@@ -33,7 +36,8 @@ public class ScotlandYardGame extends Game {
         
         final TextButtonStyle textButtonStyle = createButtonStyle(skin);
 		
-        MainMenuScreen mainMenuScreen = new MainMenuScreen(this, textButtonStyle);
+        mainMenuScreen = new MainMenuScreen(this, textButtonStyle);
+        settingsScreen = new SettingsScreen(this,textButtonStyle);
         this.setScreen(mainMenuScreen);
 	}
 

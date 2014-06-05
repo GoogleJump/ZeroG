@@ -31,7 +31,7 @@ public class SettingsScreen implements Screen {
 
 
 	private void create() {
-		Gdx.input.setInputProcessor(stage);
+		System.out.println("create in settings called");
         final TextButton mainMenuBtn = new TextButton("Main Menu", textButtonStyle);
         mainMenuBtn.setPosition(settingsBtnXPos, settingsBtnYPos);
         
@@ -41,7 +41,7 @@ public class SettingsScreen implements Screen {
         
         mainMenuBtn.addListener(new ChangeListener() {
             public void changed (ChangeEvent event, Actor actor) {
-                game.setScreen(new MainMenuScreen(game,textButtonStyle));
+                game.setScreen(game.mainMenuScreen);
             }
         });
 	}
@@ -62,6 +62,9 @@ public class SettingsScreen implements Screen {
 
 	@Override
 	public void show() {
+		Gdx.input.setInputProcessor(stage);
+		System.out.println("show in settings called");
+		
 		// TODO Auto-generated method stub	
 	}
 
