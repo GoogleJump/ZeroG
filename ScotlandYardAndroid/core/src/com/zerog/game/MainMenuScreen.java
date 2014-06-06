@@ -75,8 +75,9 @@ public class MainMenuScreen implements Screen {
 	@Override
 	public void show() {
 		Gdx.input.setInputProcessor(stage);
-		System.out.println("show in mainmenu called");
 		settingsBtn.setChecked(false);
+		System.out.println("show in mainmenu called");
+
 		// TODO Auto-generated method stub
 	}
 

@@ -4,11 +4,13 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 public class SettingsScreen implements Screen {
 	
@@ -21,6 +23,8 @@ public class SettingsScreen implements Screen {
 	
 	final int settingsBtnXPos = 500;
 	final int settingsBtnYPos = 200;
+	
+	TextButton mainMenuBtn;
 
 	public SettingsScreen(final ScotlandYardGame game, TextButtonStyle textButtonStyle) {
 		this.game = game;
@@ -32,7 +36,7 @@ public class SettingsScreen implements Screen {
 
 	private void create() {
 		System.out.println("create in settings called");
-        final TextButton mainMenuBtn = new TextButton("Main Menu", textButtonStyle);
+        mainMenuBtn = new TextButton("Main Menu", textButtonStyle);
         mainMenuBtn.setPosition(settingsBtnXPos, settingsBtnYPos);
         
         //Other buttons here
@@ -63,9 +67,9 @@ public class SettingsScreen implements Screen {
 	@Override
 	public void show() {
 		Gdx.input.setInputProcessor(stage);
+		mainMenuBtn.setChecked(false);
 		System.out.println("show in settings called");
 		
-		// TODO Auto-generated method stub	
 	}
 
 	@Override
