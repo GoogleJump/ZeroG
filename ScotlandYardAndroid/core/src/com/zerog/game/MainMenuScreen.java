@@ -45,7 +45,7 @@ public class MainMenuScreen implements Screen {
         
         playBtn.addListener(new ChangeListener() {
             public void changed (ChangeEvent event, Actor actor) {
-                //game.setScreen( new GameScreen());
+                game.setScreen(game.gameplayScreen);
             }
         });
         

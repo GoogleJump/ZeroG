@@ -17,6 +17,7 @@ public class ScotlandYardGame extends Game {
 	
 	public MainMenuScreen mainMenuScreen;
 	public SettingsScreen settingsScreen;
+	public GameplayScreen gameplayScreen;
 	
 	
 	@Override
@@ -38,6 +39,7 @@ public class ScotlandYardGame extends Game {
 		
         mainMenuScreen = new MainMenuScreen(this, textButtonStyle);
         settingsScreen = new SettingsScreen(this,textButtonStyle);
+        gameplayScreen = new GameplayScreen(this, textButtonStyle);
         this.setScreen(mainMenuScreen);
 	}
 
