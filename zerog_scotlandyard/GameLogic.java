@@ -61,4 +61,22 @@ public class GameLogic {
 		}
 		return locations;
 	}
+	
+	public boolean DetectiveWin (Node detectDestination, Node MrXLocation) {
+		if (detectDestination = MrXlocation)
+			return true;
+		else
+			return false;
+	}
+	
+	public boolean MrXwin (Player[] players, int numPlayers, List<Node> moveLog){
+		for (i=1; i < numPlayers, i++)	{		//i is initialized to one because numPlayers includes MrX
+			if (!Players[i].canMove)
+				return true;
+		}
+		if (MrX.moveLog.size() = MAX_MRX_MOVES)
+				return true;
+		else 
+			return false;
+	}
 }
