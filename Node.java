@@ -1,10 +1,12 @@
-import java.util.*;
-public class Node {
+package zerog_scotlandyard;
+import java.util.HashSet;
+import java.util.Set;
 
+
+public class Node {
 	private int id;
 	private Set<Node> taxiEdges, busEdges, ugEdges;
 
-	
 	Node(int id) {
 		this.id = id;
 		taxiEdges = new HashSet<Node>();
@@ -45,5 +47,13 @@ public class Node {
 			default:
 				throw new IllegalArgumentException();
 		}
+	}
+
+	public Set<Node> getAllEdges(){
+		Set<Node> allEdges = new HashSet<Node>();
+		allEdges.addAll(taxiEdges);
+		allEdges.addAll(busEdges);
+		allEdges.addAll(ugEdges);
+		return allEdges;
 	}
 }
