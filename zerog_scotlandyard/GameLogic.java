@@ -62,19 +62,28 @@ public class GameLogic {
 		return locations;
 	}
 	
+	public boolean WinLoss(Player player, Node destination, Node MrXLocation, Player[] players, int numPlayers, List<Node> moveLog) {	//still need to reduce number of arguments and change argument names	
+		if (player instanceof Detectective)
+			DetectiveWin(destination, MrXLocation);
+		if (player instanceof MrX)
+			MrXWin(players, numPlayers, moveLog);
+		else 
+			thrown new IllegalArgumentException();		//trow exception
+	}
+
 	public boolean DetectiveWin (Node detectDestination, Node MrXLocation) {
-		if (detectDestination = MrXlocation)
+		if (detectDestination == MrXlocation)
 			return true;
 		else
 			return false;
 	}
 	
 	public boolean MrXwin (Player[] players, int numPlayers, List<Node> moveLog){
-		for (i=1; i < numPlayers, i++)	{		//i is initialized to one because numPlayers includes MrX
+		for (i=1; i < numPlayers;, i++)	{		//i is initialized to one because numPlayers includes MrX
 			if (!Players[i].canMove)
 				return true;
 		}
-		if (MrX.moveLog.size() = MAX_MRX_MOVES)
+		if (MrX.moveLog.size() == MAX_MRX_MOVES)
 				return true;
 		else 
 			return false;
