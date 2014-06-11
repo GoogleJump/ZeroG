@@ -63,7 +63,7 @@ public class GameLogic {
 		return locations;
 	}
 	
-	public boolean WinLoss() {
+	public boolean checkWin() {
 		for (Player player : players.value()) {
 			if (player instanceof Detective) {
 				if (player.getLocation() == players.get(0).getLocation())	//assuming Mrx "key" or PlayerID is 0
