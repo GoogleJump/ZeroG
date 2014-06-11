@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class GameLogic {
+	//static int MAX_MRX_MOVES = 24;
 	static Map<PlayerID, Player> players = new HashMap<PlayerID, Player>();
 	static Set<Node> gameBoard;
 	//manually game board graph here
@@ -62,30 +63,45 @@ public class GameLogic {
 		return locations;
 	}
 	
-	public boolean WinLoss(Player player, Node destination, Node MrXLocation, Player[] players, int numPlayers, List<Node> moveLog) {	//still need to reduce number of arguments and change argument names	
-		if (player instanceof Detectective)
-			DetectiveWin(destination, MrXLocation);
-		if (player instanceof MrX)
-			MrXWin(players, numPlayers, moveLog);
-		else 
-			thrown new IllegalArgumentException();		//trow exception
+	public boolean WinLoss() {
+		for (Player player : players.value()) {
+			if (player instanceof Detective) {
+				if (player.getLocation() == players.get(0).getLocation())	//assuming Mrx "key" or PlayerID is 0
+					return true;
+			}
+			if (player instanceof MrX) {
+				int CantMoves = 0;
+				for (Player detective : players.values()) {
+					if (!detective.canMove())
+						CantMoves++;
+				}
+				if (CantMoves == (players.size()-1))
+					return true;
+				else
+					return false;
+			}
+			else 
+				thrown new IllegalArgumentException();	//trow exception
+		}
 	}
-
-	public boolean DetectiveWin (Node detectDestination, Node MrXLocation) {
-		if (detectDestination == MrXlocation)
-			return true;
+/*
+	public boolean DetectiveWin () {
+		for (Player detective : players.values())	{		//i is initialized to one because numPlayers includes MrX
+			if (detective.getLocation() = MrX.getLocation())
+				return true;
 		else
 			return false;
-	}
-	
-	public boolean MrXwin (Player[] players, int numPlayers, List<Node> moveLog){
-		for (i=1; i < numPlayers;, i++)	{		//i is initialized to one because numPlayers includes MrX
-			if (!Players[i].canMove)
-				return true;
 		}
-		if (MrX.moveLog.size() == MAX_MRX_MOVES)
+	}
+	public boolean MrXwin (){
+		for (Player player : players.values())	{		//i is initialized to one because numPlayers includes MrX
+			if (!player.canMove())
 				return true;
+	//	}
+	//	if (MrX.moveLog.size() == MAX_MRX_MOVES)
+	//			return true;
 		else 
 			return false;
 	}
+*/	
 }
