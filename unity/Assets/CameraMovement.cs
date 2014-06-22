@@ -8,9 +8,10 @@ public class CameraMovement : MonoBehaviour {
 	public float cameraLimitYMax;
 	private Vector2 prevMousePosition;
 	private Vector2 delta;
+
 	// Use this for initialization
 	void Start () {
-	 prevMousePosition = new Vector2 (0, 0);
+	 	prevMousePosition = new Vector2 (0, 0);
 	}
 	
 	// Update is called once per frame

@@ -6,8 +6,11 @@ public class TouchHandler : MonoBehaviour {
 	IList<Detective> detectives;
 	Detective d;
 	bool alternateTouch; //prevents mouse from registering a tocuh twice
+	GameLogic gameLogic;
+
 	// Use this for initialization
 	void Start () {
+		gameLogic = new GameLogic ();
 		Detective d = GameObject.Find ("Detective").GetComponent<Detective>();
 		Debug.Log ("d:" + d.ToString ());
 		GameObject[] gameObjectDetectives = GameObject.FindGameObjectsWithTag("Detective");
