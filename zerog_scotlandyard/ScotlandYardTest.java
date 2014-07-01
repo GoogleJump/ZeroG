@@ -192,14 +192,48 @@ public class ScotlandYardTest{
 		assertFalse(GameLogic.canMove(detective));
 	}
 	
-	@Test
-	public void randomizedGameLogicTest(){
-		//is a randomized test for game logic necessary?
-	}
-	
+	/**
+	*	This test checks the 2 win cases:
+	*		1) A detective finds Mr. X
+	*		2) A detective can no longer move. Can happen by the following methods:
+	*			a) All tickets have been exhausted
+	*			b) There are no tickets to leave the detective's current location. (ie no taxi tickets on a node that only has taxi connections)
+	*/
 	@Test
 	public void winLossTest(){
-		//to implement once methods of win/loss conditions are known
+		Node[] nodes = constructBasicBoard();
+		Player mrX = new MrX("Mr. X", 0);
+		Player detective = new Detective("Detective", 1);
+		Map<PlayerID, Player> players = new HashMap<PlayerID, Player>();
+		players.put(new PlayerID(mrX.getID()), mrX);
+		players.put(new PlayerID(detective.getID()), detective);
+		
+		mrX.setLocation(nodes[0]);
+		detective.setLocation(nodes[4]);
+		
+		assertFalse(GameLogic.checkWin());
+		
+		detective.move(nodes[0], TransportType.taxi);
+		
+		assertTrue(GameLogic.checkWin());
+		assertEquals(new PlayerID(1), GameLogic.getWinner());
+		
+		for(int i = 1; i < 10; i++){
+			detective.move(nodes[4], TransportType.taxi);
+		}
+		
+		assertTrue(GameLogic.checkWin());
+		assertEquals(new PlayerID(0), GameLogic.getWinner());
+		
+		for(int i = 0; i < 8; i++){
+			detective.move(nodes[3], TransportType.bus);
+		}
+		for(int i = 0; i < 4; i++){
+			detective.move(nodes[3], TransportType.underground);
+		}
+		
+		assertTrue(GameLogic.checkWin());
+		assertEquals(new PlayerID(0), GameLogic.getWinner());
 	}
 	
 	public Node[] constructBasicBoard(){

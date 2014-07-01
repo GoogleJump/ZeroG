@@ -2,7 +2,7 @@ package zerog_scotlandyard;
 import static zerog_scotlandyard.TransportType.*;
 
 public class MrX extends Player {
-	public MrX(String name, int id){
+	public MrX(String name, PlayerID id){
 		super(name, id);
 		tickets.put(taxi, 4);
 		tickets.put(bus, 3);
