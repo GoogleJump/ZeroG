@@ -211,18 +211,18 @@ public class ScotlandYardTest{
 		mrX.setLocation(nodes[0]);
 		detective.setLocation(nodes[4]);
 		
-		assertFalse(GameLogic.checkWin());
+		assertFalse(GameLogic.checkWin(players));
 		
 		detective.move(nodes[0], TransportType.taxi);
 		
-		assertTrue(GameLogic.checkWin());
+		assertTrue(GameLogic.checkWin(players));
 		assertEquals(new PlayerID(1), GameLogic.getWinner());
 		
 		for(int i = 1; i < 10; i++){
 			detective.move(nodes[4], TransportType.taxi);
 		}
 		
-		assertTrue(GameLogic.checkWin());
+		assertTrue(GameLogic.checkWin(players));
 		assertEquals(new PlayerID(0), GameLogic.getWinner());
 		
 		for(int i = 0; i < 8; i++){
@@ -232,7 +232,7 @@ public class ScotlandYardTest{
 			detective.move(nodes[3], TransportType.underground);
 		}
 		
-		assertTrue(GameLogic.checkWin());
+		assertTrue(GameLogic.checkWin(players));
 		assertEquals(new PlayerID(0), GameLogic.getWinner());
 	}
 	
