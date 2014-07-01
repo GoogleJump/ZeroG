@@ -7,12 +7,12 @@ import java.util.Map;
 
 public class Player {
 	protected String name;
-	protected int id;
+	protected PlayerID id;
 	protected Map<TransportType, Integer> tickets;
 	protected Node location;
 	protected List<String> moveLog;
 
-	public Player(String name, int id){
+	public Player(String name, PlayerID id){
 		this.name = name;
 		this.id = id;
 		this.moveLog = new LinkedList<String>();
@@ -38,5 +38,9 @@ public class Player {
 
 	public int getTickets(TransportType ticket){
 		return tickets.get(ticket).intValue();
+	}
+	
+	public PlayerID getID(){
+		return id;
 	}
 }

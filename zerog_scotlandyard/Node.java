@@ -1,10 +1,13 @@
 package zerog_scotlandyard;
+
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class Node {
 	private int id;
+	private int value;
+	private Color color;
+	private Node parent;
 	private Set<Node> taxiEdges, busEdges, ugEdges;
 
 	Node(int id) {
@@ -55,5 +58,29 @@ public class Node {
 		allEdges.addAll(busEdges);
 		allEdges.addAll(ugEdges);
 		return allEdges;
+	}
+	
+	public void setValue(int value){
+		this.value = value;
+	}
+	
+	public int getValue(){
+		return value;
+	}
+	
+	public void setColor(Color color){
+		this.color = color;
+	}
+	
+	public Color getColor(){
+		return color;
+	}
+	
+	public void setParent(Node parent){
+		this.parent = parent;
+	}
+	
+	public Node getParent(){
+		return parent;
 	}
 }
