@@ -39,4 +39,8 @@ public class Player {
 	public int getTickets(TransportType ticket){
 		return tickets.get(ticket).intValue();
 	}
+	
+	public int getMoveLogSize(){
+		return moveLog.size();
+	}
 }
