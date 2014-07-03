@@ -8,9 +8,44 @@ import java.util.Set;
 public class GameLogic {
 	final static int MAX_MRX_MOVES = 24;
 	static Map<PlayerID, Player> players = new HashMap<PlayerID, Player>();
-	static Set<Node> gameBoard;
-	//manually game board graph here
+	static Map <NodeID, Node> board = new HashMap<NodeID, Node>();
 
+	//read in line into a string
+	public void BuildMap(string textFile){
+		String line = br.readLine;
+		while (line != null){
+			line.split(',');	//split string, third element is transportType
+			addLines(line, line[2])
+		}
+	}
+	
+	//add connections to map
+	public void addLines (string line, string type){
+		//use inter.parseInt() to get the integer values
+		switch(type){
+			case taxi:
+				board.get(Integer.parseInt(line[0]).line(board.get(Integer.parseInt(line[1])), taxi);
+				board.get(Integer.parseInt(line[1]).line(board.get(Integer.parseInt(line[0])), taxi);
+			case bus:
+				board.get(Integer.parseInt(line[0]).line(board.get(Integer.parseInt(line[1])), bus);
+				board.get(Integer.parseInt(line[1]).line(board.get(Integer.parseInt(line[0])), bus);
+			case underground:
+				board.get(Integer.parseInt(line[0]).line(board.get(Integer.parseInt(line[1])), underground);
+				board.get(Integer.parseInt(line[1]).line(board.get(Integer.parseInt(line[0])), underground);
+		}
+	}
+	
+	/*
+	for (i = 0; i < numLines, i++){		//still working on it
+		addLines (taxiLines[i][], Taxi);
+		}
+	addLines (busLines[i][], Bus);
+	addLines (ugLines[i][], Underground);
+	*/
+	
+	
+	
+	
 	public static boolean canMove (Player player) {
 		Set<Node> allPossibleMoveLocations = player.getLocation().getAllEdges();
 		Set<Node> allOtherPlayerLocations = getAllOtherPlayerLocations(player);
@@ -78,7 +113,7 @@ public class GameLogic {
 				}
 				if (CantMoves == (players.size()-1))
 					return true;
-				if (player.getMoveLogSize() == MAX_MRX_MOVES)			//add getMoveLogSize to Player.java 
+				if (player.getMoveLogSize() == MAX_MRX_MOVES)
 					return true;
 			}
 			else 
