@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class GameLogic {
+public class GameLogic : MonoBehaviour {
 
 	public HashSet<Node> gameBoard;
 	public GameLogic(){

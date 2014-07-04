@@ -41,7 +41,7 @@ public class TouchHandler : MonoBehaviour {
 
 			foreach(Detective d in detectives){
 				if (d.isSelected() && alternateTouch){
-					d.move(inputPosition.x, inputPosition.y);
+					d.moveGameObject(inputPosition.x, inputPosition.y);
 					d.Deselect();
 				}
 			}
