@@ -103,14 +103,11 @@ public class GameLogic {
 		return (player.getTickets(transportType) > 0);
 	}
 
-	public static bool checkWin(){
-		return checkWin (_players);
-	}
-
-	public static bool checkWin(Dictionary<int, Player> players) {
+	public static bool checkWin(Dictionary<int, Player> players, out int winningPlayerId) {
 		foreach (Player player in players.Values){
 			if (player is Detective){
 				if (player.getLocation() == players[0].getLocation()){
+					winningPlayerId = player.getId ();
 					return true;
 				}
 			} else if (player is MrX){
@@ -120,9 +117,11 @@ public class GameLogic {
 						CantMoves++;
 				}
 				if (CantMoves == (players.Count-1)){
+					winningPlayerId = player.getId ();
 					return true;
 				}
 				if (player.getMoveLogSize() == MAX_MRX_MOVES){
+					winningPlayerId = player.getId ();
 					return true;
 				}
 				
@@ -130,11 +129,7 @@ public class GameLogic {
 					throw new ArgumentException();
 			}
 		}
+		winningPlayerId = -1;
 		return false;
-	}
-
-	public static int getWinner(){
-		//todo
-		return 0;
 	}
 }

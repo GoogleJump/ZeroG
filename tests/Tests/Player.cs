@@ -23,7 +23,7 @@ public class Player {
 	public void move(Node n, TransportType ticket){
 		int numOfTickets;
 		if(_tickets.TryGetValue(ticket, out numOfTickets)){
-			_tickets.Add(ticket, --numOfTickets);
+			_tickets[ticket] = 	--numOfTickets;
 			setLocation(n);
 		}
 	}
@@ -42,7 +42,6 @@ public class Player {
 	}
 	
 	public int getTickets(TransportType ticket){
-		//return _tickets.get(ticket).intValue();
 		int numOfTickets;
 		if(_tickets.TryGetValue(ticket, out numOfTickets)){
 			return numOfTickets;
@@ -53,15 +52,5 @@ public class Player {
 	
 	public int getMoveLogSize(){
 		return _moveLog.Count();
-	}
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

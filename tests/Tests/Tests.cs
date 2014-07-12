@@ -173,7 +173,7 @@ namespace Game
 			mrX.move(nodes[1], TransportType.bus);
 			mrX.move(nodes[0], TransportType.bus);
 
-			Assert.True(GameLogic.canMove(mrX));
+			Assert.False(GameLogic.canMove(mrX));
 
 			Player blockade1 = new Detective("Blockade 1", 2);
 			Player blockade2 = new Detective("Blockade 2", 3);
@@ -198,19 +198,26 @@ namespace Game
 			mrX.setLocation(nodes[0]);
 			detective.setLocation(nodes[4]);
 
-			Assert.False(GameLogic.checkWin(players));
+			int dummyWinningPlayerId;
+			Assert.False(GameLogic.checkWin(players, out dummyWinningPlayerId));
 
 			detective.move(nodes[0], TransportType.taxi);
 
-			Assert.True(GameLogic.checkWin(players));
-			Assert.Equals(1, GameLogic.getWinner());
+			int firstWinningPlayerId;
+			bool gameWon = GameLogic.checkWin (players, out  firstWinningPlayerId);
+
+			Assert.True(gameWon);
+			Assert.AreEqual(1, firstWinningPlayerId);
 
 			for(int i = 1; i < 10; i++){
 				detective.move(nodes[4], TransportType.taxi);
 			}
 
-			Assert.True(GameLogic.checkWin(players));
-			Assert.Equals(0, GameLogic.getWinner());
+			int secondWinningPlayerId;
+			gameWon = GameLogic.checkWin (players, out secondWinningPlayerId);
+
+			Assert.True(gameWon);
+			Assert.AreEqual(0, secondWinningPlayerId);
 
 			for(int i = 0; i < 8; i++){
 				detective.move(nodes[3], TransportType.bus);
@@ -219,8 +226,10 @@ namespace Game
 				detective.move(nodes[3], TransportType.underground);
 			}
 
-			Assert.True(GameLogic.checkWin(players));
-			Assert.AreEqual(0, GameLogic.getWinner());
+			int thirdWinningPlayerId;
+			gameWon = GameLogic.checkWin (players, out thirdWinningPlayerId);
+			Assert.True(gameWon);
+			Assert.AreEqual(0, thirdWinningPlayerId);
 		}
 
 		public Node[] constructBasicBoard(){
