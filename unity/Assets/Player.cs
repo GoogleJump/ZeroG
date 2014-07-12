@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Player : MonoBehaviour {
-
 	protected String _name;
 	protected int _id;
 	protected IDictionary<TransportType, int> _tickets;
@@ -24,9 +23,13 @@ public class Player : MonoBehaviour {
 	public void move(Node n, TransportType ticket){
 		int numOfTickets;
 		if(_tickets.TryGetValue(ticket, out numOfTickets)){
-			_tickets.Add(ticket, --numOfTickets);
+			_tickets[ticket] = 	--numOfTickets;
 			setLocation(n);
 		}
+	}
+	
+	public int getId(){
+		return _id;
 	}
 	
 	public Node getLocation(){
@@ -39,7 +42,6 @@ public class Player : MonoBehaviour {
 	}
 	
 	public int getTickets(TransportType ticket){
-		//return _tickets.get(ticket).intValue();
 		int numOfTickets;
 		if(_tickets.TryGetValue(ticket, out numOfTickets)){
 			return numOfTickets;
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour {
 	public int getMoveLogSize(){
 		return _moveLog.Count();
 	}
-
+	
 	// Use this for initialization
 	void Start () {
 	

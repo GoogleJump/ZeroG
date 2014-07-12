@@ -30,6 +30,11 @@ public class Node {
 		}
 	}
 
+	public void addEdges(Node otherNode, TransportType type) {
+		addEdge (otherNode, type);
+		otherNode.addEdge (this, type);
+	}
+
 
 	/** Returns the adjacent edges of this node */
 	public HashSet<Node> getEdges(TransportType type) {
