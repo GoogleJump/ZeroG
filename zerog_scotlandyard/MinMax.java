@@ -10,11 +10,15 @@ import java.util.PriorityQueue;
 *		methods are helper methods.
 */
 public class MinMax{
-	PlayerID playerID;
+	PlayerID mrX;
+	Set<PlayerID> detectives;
 	
-	public GamePosition minMax(GamePosition game, PlayerID playerID, int depth){
-		this.playerID = playerID;
-		return MaxMove(game, depth);
+	public GamePosition minMax(GamePosition game, PlayerID mrX, int depth){
+		this.mrX = mrX;
+		Map<PlayerID, Player> players = game.getPlayers();
+		detectives = players.keySet();
+		detectives.remove(mrX);
+		return MaxMove(game, depth * players.size());
 	}
 	
 	public GamePosition maxMove(GamePosition game, int depth){
@@ -24,9 +28,10 @@ public class MinMax{
 		else{
 			GamePosition potentialMove;
 			GamePosition bestMove = null;
-			Set<GamePosition> moves = generateMrXMoves(game);
+			Set<GamePosition> moves = generateMoves(game, mrX);
 			for(GamePosition move : moves){
-				potentialMove = minMove(move, depth - 1);
+				Iterator iterator = detectives.iterator();
+				potentialMove = minMove(move, iterator.next(), depth - 1);
 				if(bestMove == null || findValue(potentialMove) > findValue(bestMove)){
 					bestMove = potentialMove;
 				}
@@ -35,16 +40,21 @@ public class MinMax{
 		}
 	}
 	
-	public GamePosition minMove(GamePosition game, int depth){
+	public GamePosition minMove(GamePosition game, PlayerID detective, int depth){
 		if(depth == 0 || GameLogic.gameEnded(game)){
 			return game;
 		}
 		else{
 			GamePosition potentialMove;
 			GamePosition bestMove = null;
-			Set<GamePosition> moves = generateDetectiveMoves(game);
+			Set<GamePosition> moves = generateMoves(game, detective);
 			for(GamePosition move : moves){
-				potentialMove = maxMove(move, depth - 1);
+				if(!iterator.hasNext()){
+					potentialMove = maxMove(move, depth - 1);
+				}
+				else{
+					potentialMove = minMove(move, iterator.next, depth - 1);
+				}
 				if(bestMove == null || findValue(potentialMove) < findValue(bestMove)){
 					bestMove = potentialMove;
 				}
@@ -53,7 +63,7 @@ public class MinMax{
 		}
 	}
 	
-	public Set<GamePosition> generateMrXMoves(GamePosition game){
+	public Set<GamePosition> generateMoves(GamePosition game, PlayerID playerID){
 		Set<Node> moves = game.getPossibleMoves(playerID);
 		Set<GamePosition> possibleMoves = new HashSet<GamePosition>();
 		for(Node move : moves){
@@ -62,25 +72,12 @@ public class MinMax{
 		return possibleMoves;
 	}
 	
-	/**
-	*	TO-DO: Figure out how to find a GamePosition for every possible move arrangement.
-	*/
-	public Set<GamePosition> generateDetectiveMoves(GamePosition game){
-		Set<HashSet<Node>> moves = new HashSet<HashSet<Node>>();
-		for(Player player : game.getPlayers()){
-			if(player.getID() != playerID){
-				moves.add(game.getPossibleMoves(player.getID()));
-			}
-		}
-		Set<GamePosition> possibleMoves = new HashSet<GamePosition>();
-		//implement a permutation of every possible move arrangement. (recursive?)
-		return possibleMoves;
-	}
-	
-	public Node findValue(GamePosition game){
+	public int findValue(GamePosition game){
 		int totalValue = 0;
 		for(Player player : game.getPlayers()){
-			totalValue += calculateValue(game, player);
+			if(!player instanceof MrX){
+				totalValue += calculateValue(game, player);
+			}
 		}
 		return totalValue;
 	}
@@ -108,7 +105,7 @@ public class MinMax{
 					v.setColor(Color.GRAY);
 					v.setValue(u.getValue() + 1);
 					v.setParent(u);
-					if(v == game.getPlayers().get(playerID)){
+					if(v == game.getPlayers().get(mrX)){
 						return v.getValue();
 					}
 					pq.add(v);
