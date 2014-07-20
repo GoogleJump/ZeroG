@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Priority_Queue;
 
-public class Node {
+public class Node : PriorityQueueNode {
 
 	public int Id { get; set; }
+	public Color Color { get; set; }
+	public int Value { get; set; }
+	public Node Parent { get; set; }
 	private HashSet<Node> _taxiEdges, _busEdges, _ugEdges; //.net 3.5 doesn't support iset<t>
 
 	public Node(int id) {

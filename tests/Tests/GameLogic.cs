@@ -2,53 +2,50 @@
 using System.Collections.Generic;
 using System;
 using System.IO;
+using System.Linq;
 
 public class GameLogic {
 
 	static readonly int MAX_MRX_MOVES = 24;
-	static Dictionary<int, Player> _players = new Dictionary<int, Player>();
-	static Dictionary<int, Node> board =  new Dictionary<int,Node>();
-
-	public GameLogic(){
-		BuildMap("BoardNodes.txt");
-	}
+	public static GamePosition GamePosition { get; set; }
 
 	public static void BuildMap(string textFile){
 				//create array of strings to hold lines of text file
-				string [] lines = File.ReadAllLines (textFile);
+				string [] lines = File.ReadAllLines(textFile);
 
 				//loop through each line (string) 
-				foreach (string line in lines) {
-						//split it into an an array of strings 
-						string [] connection = line.Split (',');
+				foreach (string line in lines){
+					//split it into an an array of strings 
+					string [] connection = line.Split(',');
 
-						//create new nodes
-						int nodeID0 = int.Parse (connection [0]);
-						int nodeID1 = int.Parse (connection [1]);
-						TransportType connType;
+					//create new nodes
+					int nodeID0 = int.Parse (connection [0]);
+					int nodeID1 = int.Parse (connection [1]);
+					TransportType connType;
 
-						switch (connection [2]) {
-							case "taxi":
-								connType = TransportType.taxi;
-								break;
-							case "bus":
-								connType = TransportType.bus;
-								break;
-							case "underground":
-								connType = TransportType.underground;
-								break;
-							default:
-								throw new Exception();
-						}
+					switch (connection [2]) {
+						case "taxi":
+							connType = TransportType.taxi;
+							break;
+						case "bus":
+							connType = TransportType.bus;
+							break;
+						case "underground":
+							connType = TransportType.underground;
+							break;
+						default:
+							throw new Exception();
+					}
 
-						//check if nodes are already in board
-						if (!board.ContainsKey (nodeID0))
-								board.Add (nodeID0, new Node (nodeID0));
+					//check if nodes are already in board
+					if (!GamePosition.Board.ContainsKey(nodeID0)) {
+						GamePosition.Board.Add(nodeID0, new Node(nodeID0));
+					}
+					if (!GamePosition.Board.ContainsKey(nodeID1)) {
+						GamePosition.Board.Add(nodeID1, new Node(nodeID1));
+					}
 
-						if (!board.ContainsKey (nodeID1))
-								board.Add (nodeID1, new Node (nodeID1));
-
-						board [nodeID0].addEdges (board [nodeID1], connType);
+					GamePosition.Board[nodeID0].addEdges(GamePosition.Board[nodeID1], connType);
 				}
 		}
 
@@ -80,7 +77,7 @@ public class GameLogic {
 
 	public static HashSet<Node> getAllOtherPlayerLocations(Player currentPlayer){
 		HashSet<Node> locations = new HashSet<Node>();
-		foreach (Player player in _players.Values){
+		foreach (Player player in GamePosition.Players.Values){
 			if (player != currentPlayer){
 				locations.Add(player.getLocation());
 			}
@@ -131,5 +128,42 @@ public class GameLogic {
 		}
 		winningPlayerId = -1;
 		return false;
+	}
+
+	public static GamePosition ApplyMove(int player, Node move, GamePosition gamePosition){
+
+		GamePosition potentialResult = gamePosition;
+
+		HashSet<TransportType> possibleConnection = getPossibleConnectionTypes(potentialResult.Players[player].getLocation(), move);
+
+		foreach (TransportType type in possibleConnection) {
+			if (playerHasEnoughTickets(potentialResult.Players[player], type)){
+				potentialResult.Players[player].move(move, type);
+				break;
+			}
+		}
+		return potentialResult;
+	}
+
+	public static HashSet<Node> GetPossibleMoves(int player){
+		Node currentLocation = GamePosition.Players[player].getLocation();
+		HashSet<Node> possibleLocations = new HashSet<Node>();
+		HashSet<Node> occupiedLocations = GameLogic.getAllOtherPlayerLocations(GamePosition.Players[player]);
+		HashSet<Node> checkLocations;
+
+		if(playerHasEnoughTickets(GamePosition.Players[player], TransportType.blackCard)){
+			checkLocations = currentLocation.getAllEdges();
+			checkLocations.ExceptWith(occupiedLocations);
+			possibleLocations.Union(checkLocations);
+		} else {
+			foreach(TransportType type in Enum.GetValues(typeof(TransportType))){
+				if(playerHasEnoughTickets(GamePosition.Players[player], type)){
+					checkLocations = currentLocation.getEdges(type);
+					checkLocations.ExceptWith(occupiedLocations);
+					possibleLocations.Union(checkLocations);
+				}
+			}
+		}
+		return possibleLocations;
 	}
 }

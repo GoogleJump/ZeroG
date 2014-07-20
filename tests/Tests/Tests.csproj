@@ -37,6 +37,9 @@
     <Compile Include="Node.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="TransportType.cs" />
+    <Compile Include="MinMax.cs" />
+    <Compile Include="GamePosition.cs" />
+    <Compile Include="Color.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="nunit.core">
@@ -46,5 +49,11 @@
       <HintPath>..\..\..\..\..\Downloads\nunitsetup\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Priority Queue.csproj">
+      <Project>{1531C1EA-BD53-41D1-A34B-CFCDF79D2651}</Project>
+      <Name>Priority Queue</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
