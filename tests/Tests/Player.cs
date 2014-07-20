@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Player : MonoBehaviour {
+public class Player {
+
 	protected String _name;
 	protected int _id;
 	protected IDictionary<TransportType, int> _tickets;
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
 			setLocation(n);
 		}
 	}
-	
+
 	public int getId(){
 		return _id;
 	}
@@ -52,15 +52,5 @@ public class Player : MonoBehaviour {
 	
 	public int getMoveLogSize(){
 		return _moveLog.Count();
-	}
-	
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
