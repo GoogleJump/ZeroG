@@ -6,8 +6,8 @@ using System.IO;
 
 public class GameLogic {
 
-	const static int MAX_MRX_MOVES = 24;
-	static Dictionary<PlayerID, Player> players = new Dictionary<PlayerID, Player>();
+	const int MAX_MRX_MOVES = 24;
+	static Dictionary<int, Player> players = new Dictionary<int, Player>();
 	static Dictionary<int, Node> board =  new Dictionary<int,Node>();
 
 	public GameLogic(){
@@ -88,7 +88,7 @@ public class GameLogic {
 		}
 	}
 
-	public static checkWin() {
+	public static bool checkWin() {
 		foreach (Player player in players.values()){
 			if (player is Detective){
 				if (player.getLocation() == players.get(0).getLocation(){
