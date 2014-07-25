@@ -49,11 +49,13 @@
      <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\Detective.cs" />
      <Compile Include="Assets\GameLogic.cs" />
+     <Compile Include="Assets\Gameplay.cs" />
      <Compile Include="Assets\GameplayGUI.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\MrX.cs" />
      <Compile Include="Assets\Node.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\State.cs" />
      <Compile Include="Assets\TouchHandler.cs" />
      <Compile Include="Assets\TransportType.cs" />
      <None Include="Assets\BoardNodes.txt" />

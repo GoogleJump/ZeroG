@@ -6,7 +6,7 @@ public class TouchHandler : MonoBehaviour {
 	IList<Detective> detectives;
 	Detective d;
 	bool alternateTouch; //prevents mouse from registering a tocuh twice
-	public GameLogic gameLogic;
+	public Gameplay gamePlay;
 	public CameraMovement cameraMovement;
 
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class TouchHandler : MonoBehaviour {
 		}
 		bool alternate = false;
 
-		gameLogic = GetComponent<GameLogic> ();
+		gamePlay = GetComponent<Gameplay> ();
 	}
 	
 	// Update is called once per frame
@@ -40,6 +40,7 @@ public class TouchHandler : MonoBehaviour {
 
 				Vector3 center = hit.collider.bounds.center;
 				Camera.main.transform.position = new Vector3(center.x, center.y, Camera.main.transform.position.z);
+				gamePlay.incrementState();
 			}
 
 			foreach(Detective d in detectives){
