@@ -2,24 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class TouchHandler : MonoBehaviour {
-	IList<Detective> detectives;
-	Detective d;
-	bool alternateTouch; //prevents mouse from registering a tocuh twice
+	bool alternateTouch; //prevents mouse from registering a touch twice
 	public Gameplay gamePlay;
-	public CameraMovement cameraMovement;
 
 	// Use this for initialization
 	void Start () {
-		Detective d = GameObject.Find ("Detective").GetComponent<Detective>();
-		Debug.Log ("d:" + d.ToString ());
-		GameObject[] gameObjectDetectives = GameObject.FindGameObjectsWithTag("Detective");
-		detectives = new List<Detective>();
-		foreach(GameObject gameObject in gameObjectDetectives){
-			detectives.Add(gameObject.GetComponent<Detective>());
-		}
-		bool alternate = false;
-
 		gamePlay = GetComponent<Gameplay> ();
 	}
 	
@@ -38,19 +27,17 @@ public class TouchHandler : MonoBehaviour {
 					d.Select();
 				}
 
-				Vector3 center = hit.collider.bounds.center;
-				Camera.main.transform.position = new Vector3(center.x, center.y, Camera.main.transform.position.z);
-				gamePlay.incrementState();
+				//Vector3 center = hit.collider.bounds.center;
+
+				gamePlay.goToState(State.d1Turn);
 			}
 
-			foreach(Detective d in detectives){
-				if (d.isSelected() && alternateTouch){
-					d.moveGameObject(inputPosition.x, inputPosition.y);
-					d.Deselect();
-				}
-			}
+//			foreach(Detective d in detectives){
+//				if (d.isSelected() && alternateTouch){
+//					d.moveGameObject(inputPosition.x, inputPosition.y);
+//					d.Deselect();
+//				}
+//			}
 		}
 	}
-	
-
 }

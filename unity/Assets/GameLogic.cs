@@ -3,27 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.IO;
+using System.Linq;
 
 public class GameLogic : MonoBehaviour {
 
 	public TextAsset _boardNodesTextAsset;
 	readonly int MAX_MRX_MOVES = 24;
-	Dictionary<int, Player> _players = new Dictionary<int, Player>();
-	Dictionary<int, Node> _board =  new Dictionary<int,Node>();
+	public GamePosition GameBoard { get; set; }
 
 	// Use this for initialization
 	void Start () {
-		BuildMap();
+		GameBoard = new GamePosition();
+		//BuildMap();
 	}
 
 	public void BuildMap(){
 		//create array of strings to hold lines of text file
 		string [] lines = _boardNodesTextAsset.text.Split ("\n" [0]);
-		
-		//loop through each line (string) 
-		foreach (string line in lines) {
+
+		foreach (string line in lines){
 			//split it into an an array of strings 
-			string [] connection = line.Split (',');
+			string [] connection = line.Split(',');
 			
 			//create new nodes
 			int nodeID0 = int.Parse (connection [0]);
@@ -31,30 +31,31 @@ public class GameLogic : MonoBehaviour {
 			TransportType connType;
 			
 			switch (connection [2]) {
-			case "taxi":
-				connType = TransportType.taxi;
-				break;
-			case "bus":
-				connType = TransportType.bus;
-				break;
-			case "underground":
-				connType = TransportType.underground;
-				break;
-			default:
-				throw new Exception();
+				case "taxi":
+					connType = TransportType.taxi;
+					break;
+				case "bus":
+					connType = TransportType.bus;
+					break;
+				case "underground":
+					connType = TransportType.underground;
+					break;
+				default:
+					throw new Exception();
 			}
 			
-			//check if nodes are already in _board
-			if (!_board.ContainsKey (nodeID0))
-				_board.Add (nodeID0, new Node (nodeID0));
+			//check if nodes are already in board
+			if (!GameBoard.Board.ContainsKey(nodeID0)) {
+				GameBoard.Board.Add(nodeID0, new Node(nodeID0));
+			}
+			if (!GameBoard.Board.ContainsKey(nodeID1)) {
+				GameBoard.Board.Add(nodeID1, new Node(nodeID1));
+			}
 			
-			if (!_board.ContainsKey (nodeID1))
-				_board.Add (nodeID1, new Node (nodeID1));
-			
-			_board [nodeID0].addEdges (_board [nodeID1], connType);
+			GameBoard.Board[nodeID0].addEdges(GameBoard.Board[nodeID1], connType);
 		}
 	}
-	
+
 	public bool canMove (Player player) {
 		HashSet<Node> allPossibleMoveLocations = new HashSet<Node>();
 		
@@ -83,7 +84,7 @@ public class GameLogic : MonoBehaviour {
 	
 	public HashSet<Node> getAllOtherPlayerLocations(Player currentPlayer){
 		HashSet<Node> locations = new HashSet<Node>();
-		foreach (Player player in _players.Values){
+		foreach (Player player in GameBoard.Players.Values){
 			if (player != currentPlayer){
 				locations.Add(player.getLocation());
 			}
@@ -134,5 +135,40 @@ public class GameLogic : MonoBehaviour {
 		}
 		winningPlayerId = -1;
 		return false;
+	}
+	
+	public GamePosition ApplyMove(int player, Node move, GamePosition gamePosition){
+		GamePosition potentialResult = gamePosition;
+		HashSet<TransportType> possibleConnection = getPossibleConnectionTypes(potentialResult.Players[player].getLocation(), move);
+		
+		foreach (TransportType type in possibleConnection) {
+			if (playerHasEnoughTickets(potentialResult.Players[player], type)){
+				potentialResult.Players[player].move(move, type);
+				break;
+			}
+		}
+		return potentialResult;
+	}
+	
+	public HashSet<Node> GetPossibleMoves(int player){
+		Node currentLocation = GameBoard.Players[player].getLocation();
+		HashSet<Node> possibleLocations = new HashSet<Node>();
+		HashSet<Node> occupiedLocations = getAllOtherPlayerLocations(GameBoard.Players[player]);
+		HashSet<Node> checkLocations;
+		
+		if(playerHasEnoughTickets(GameBoard.Players[player], TransportType.blackCard)){
+			checkLocations = currentLocation.getAllEdges();
+			checkLocations.ExceptWith(occupiedLocations);
+			possibleLocations.Union(checkLocations);
+		} else {
+			foreach(TransportType type in Enum.GetValues(typeof(TransportType))){
+				if(playerHasEnoughTickets(GameBoard.Players[player], type)){
+					checkLocations = currentLocation.getEdges(type);
+					checkLocations.ExceptWith(occupiedLocations);
+					possibleLocations.Union(checkLocations);
+				}
+			}
+		}
+		return possibleLocations;
 	}
 }

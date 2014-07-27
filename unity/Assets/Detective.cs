@@ -4,15 +4,6 @@ using System.Collections;
 public class Detective :  Player {
 
 	private bool selected;
-	// Use this for initialization
-	void Start () {
-		selected = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public Detective (string name, int id) : base(name,id){
 		_tickets.Add(TransportType.taxi, 10);
@@ -32,9 +23,9 @@ public class Detective :  Player {
 		return selected;
 	}
 
-	public void moveGameObject (float x, float y){
-		transform.position = new Vector3 (x,y);
-		Debug.Log ("x: " + x + "y: " + y);
-		Debug.Log ("moved" );
-	}
+//	public void moveGameObject (float x, float y){
+//		transform.position = new Vector3 (x,y);
+//		Debug.Log ("x: " + x + "y: " + y);
+//		Debug.Log ("moved" );
+//	}
 }

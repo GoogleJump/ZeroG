@@ -35,6 +35,10 @@ public class Player : MonoBehaviour {
 	public Node getLocation(){
 		return _location;
 	}
+
+	public string getName(){
+		return _name;
+	}
 	
 	public void setLocation(Node location){
 		_location = location;
@@ -49,18 +53,17 @@ public class Player : MonoBehaviour {
 			return 0;
 		}
 	}
+
+	public int[] getTickets(){
+		int typesOfTickets = Enum.GetNames(typeof(TransportType)).Length;
+		int[] tickets = new int[typesOfTickets];
+		foreach (var transportType in _tickets) {
+			tickets[(int) transportType.Key] = _tickets[transportType.Key];
+		}
+		return tickets;
+	}
 	
 	public int getMoveLogSize(){
 		return _moveLog.Count();
-	}
-	
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
