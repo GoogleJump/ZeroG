@@ -6,6 +6,7 @@ public class GameplayGUI : MonoBehaviour {
 	private int btnWidth, btnHeight;
 	private int menuBtnX, menuBtnY;
 	private int groupWidth, groupHeight, groupX, groupY;
+	private Message PopUp;
 	// Use this for initialization
 	void Start () {
 		btnWidth = 80;
@@ -16,6 +17,7 @@ public class GameplayGUI : MonoBehaviour {
 		groupY = Screen.height/2 - groupHeight/2;
 		menuBtnX = 10;
 		menuBtnY = 40;
+		PopUp = GetComponent<Message> ();
 	}
 	void OnGUI ()
 	{

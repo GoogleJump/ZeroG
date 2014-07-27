@@ -6,11 +6,10 @@ public class TouchHandler : MonoBehaviour {
 	IList<Detective> detectives;
 	Detective d;
 	bool alternateTouch; //prevents mouse from registering a tocuh twice
-	GameLogic gameLogic;
+	public GameLogic gameLogic;
 
 	// Use this for initialization
 	void Start () {
-		gameLogic = new GameLogic ();
 		Detective d = GameObject.Find ("Detective").GetComponent<Detective>();
 		Debug.Log ("d:" + d.ToString ());
 		GameObject[] gameObjectDetectives = GameObject.FindGameObjectsWithTag("Detective");
@@ -41,7 +40,7 @@ public class TouchHandler : MonoBehaviour {
 
 			foreach(Detective d in detectives){
 				if (d.isSelected() && alternateTouch){
-					d.move(inputPosition.x, inputPosition.y);
+					d.moveGameObject(inputPosition.x, inputPosition.y);
 					d.Deselect();
 				}
 			}
