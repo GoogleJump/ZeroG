@@ -6,14 +6,13 @@ using System.IO;
 using System.Linq;
 
 public class GameLogic : MonoBehaviour {
-
 	public TextAsset _boardNodesTextAsset;
 	readonly int MAX_MRX_MOVES = 24;
-	public GamePosition GameBoard { get; set; }
+	public GamePosition GameBoard;
 
 	// Use this for initialization
 	void Start () {
-		GameBoard = new GamePosition();
+
 		//BuildMap();
 	}
 

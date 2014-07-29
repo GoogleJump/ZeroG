@@ -4,18 +4,13 @@ using System;
 using System.Collections.Generic;
 
 public class Gameplay : MonoBehaviour {
-	public State gameState { get; set; }
+	public State gameState;
 	public GameLogic gameLogic;
-	GameObject[] gameObjectDetectives;
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("gamplay initialized");
 		gameState = State.d1Turn;
-		gameLogic = GetComponent<GameLogic> ();
 
-		gameObjectDetectives = GameObject.FindGameObjectsWithTag("Detective");
-		//gameObject.GetComponent<Detective>()
 	}
 	
 	// Main loop - Update is called once per frame
@@ -47,15 +42,16 @@ public class Gameplay : MonoBehaviour {
 				Debug.Log ("mrxTurn");
 				break;
 			default:
-				Console.WriteLine ("default");
+				Debug.Log ("default");
 				break;
 		}
 		gameState = state;
 	}
 
 	public void centerCameraOnDetective(int detectiveNumber){
-		int detectiveIndex = detectiveNumber - 1; 
-		Camera.main.transform.position = new Vector3(gameObjectDetectives[detectiveIndex].transform.position.x, gameObjectDetectives[detectiveIndex].transform.position.x, Camera.main.transform.position.z);
+		Camera.main.transform.position = new Vector3(gameLogic.GameBoard.Players[detectiveNumber].transform.position.x, 
+		                                             gameLogic.GameBoard.Players[detectiveNumber].transform.position.y, 
+		                                             Camera.main.transform.position.z);
 	}
 
 	public Player getCurrentPlayer(){

@@ -9,15 +9,18 @@ public class TouchHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gamePlay = GetComponent<Gameplay> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began) 
+		if(Input.touchCount != 1){
+			return;
+		}
+		Touch firstFinger = Input.GetTouch (0);
+		if (firstFinger.phase == TouchPhase.Ended && firstFinger.tapCount == 1) 
 		{
 			alternateTouch = !alternateTouch;
-			Vector3 inputPosition  = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x,Input.GetTouch(0).position.y, 0));
+			Vector3 inputPosition  = Camera.main.ScreenToWorldPoint(new Vector3(firstFinger.position.x,firstFinger.position.y, 0));
 			RaycastHit2D hit = Physics2D.Raycast(inputPosition, Vector2.zero);
 
 			if (hit.collider != null) {

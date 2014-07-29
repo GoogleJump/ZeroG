@@ -5,12 +5,6 @@ public class Detective :  Player {
 
 	private bool selected;
 
-	public Detective (string name, int id) : base(name,id){
-		_tickets.Add(TransportType.taxi, 10);
-		_tickets.Add(TransportType.bus, 8);
-		_tickets.Add(TransportType.underground, 4);
-	}
-
 	public void Select() {
 		selected = true;
 	}

@@ -7,17 +7,31 @@ using System.Linq;
 public class Player : MonoBehaviour {
 	protected String _name;
 	protected int _id;
-	protected IDictionary<TransportType, int> _tickets;
+	protected IDictionary<TransportType, int> _tickets = new Dictionary<TransportType, int>();
 	protected Node _location;
-	protected IList<String> _moveLog;
-	
-	public Player(String name, int id){
+	protected List<String> _moveLog;
+
+	void Start(){
+		//a hack because can't use virtual methods...
+		if (this.GetType () == typeof(Detective)) {
+						_tickets.Add (TransportType.taxi, 10);
+						_tickets.Add (TransportType.bus, 8);
+						_tickets.Add (TransportType.underground, 4);
+				} else {
+			_tickets.Add(TransportType.taxi, 4);
+			_tickets.Add(TransportType.bus, 3);
+			_tickets.Add(TransportType.underground, 3);
+			_tickets.Add(TransportType.blackCard, 2);
+				}
+	}
+
+	public void createPlayer(String name, int id){
 		_name = name;
 		_id = id;
 		_moveLog = new List<String>();
-		_tickets = new Dictionary<TransportType, int>();
 	}
-	
+
+
 	//This method is only called if the move is valid
 	//GameController class will check if there are enough tickets
 	public void move(Node n, TransportType ticket){
