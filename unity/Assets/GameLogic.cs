@@ -10,10 +10,12 @@ public class GameLogic : MonoBehaviour {
 	readonly int MAX_MRX_MOVES = 24;
 	public GamePosition GameBoard;
 
+	void Awake(){
+		BuildMap();
+	}
+
 	// Use this for initialization
 	void Start () {
-
-		//BuildMap();
 	}
 
 	public void BuildMap(){
@@ -27,9 +29,9 @@ public class GameLogic : MonoBehaviour {
 			//create new nodes
 			int nodeID0 = int.Parse (connection [0]);
 			int nodeID1 = int.Parse (connection [1]);
-			TransportType connType;
-			
-			switch (connection [2]) {
+			TransportType connType = TransportType.bus; //uninitizalied connection
+
+			switch (connection[2].Trim()) {
 				case "taxi":
 					connType = TransportType.taxi;
 					break;
@@ -40,7 +42,7 @@ public class GameLogic : MonoBehaviour {
 					connType = TransportType.underground;
 					break;
 				default:
-					throw new Exception();
+					break;
 			}
 			
 			//check if nodes are already in board
@@ -78,6 +80,29 @@ public class GameLogic : MonoBehaviour {
 		}
 		
 		//player does not have enough tickets
+		return false;
+	}
+
+	public bool canMoveToNode(Player player, int nodeID){
+		Node node = GameBoard.Board[nodeID];
+		if (playerOnNode (node)) {
+			return false;
+		}
+		HashSet<TransportType> connections = getPossibleConnectionTypes(player.Location, node);
+		foreach(TransportType type in connections){
+			if(playerHasEnoughTickets(player, type)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public bool playerOnNode(Node node){
+		foreach (Player player in GameBoard.Players.Values) {
+			if (player.Location == node) {
+				return true;
+			}
+		}
 		return false;
 	}
 	

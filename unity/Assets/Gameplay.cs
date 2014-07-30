@@ -6,11 +6,11 @@ using System.Collections.Generic;
 public class Gameplay : MonoBehaviour {
 	public State gameState;
 	public GameLogic gameLogic;
+	public Message message;
 
 	// Use this for initialization
 	void Start () {
-		gameState = State.d1Turn;
-
+		goToState (State.d1Turn);
 	}
 	
 	// Main loop - Update is called once per frame
@@ -23,6 +23,7 @@ public class Gameplay : MonoBehaviour {
 			case State.d1Turn:
 				Debug.Log ("d1turn");
 				centerCameraOnDetective(1);
+				Message.PopUp("d1 turn!", "ok..");
 				break;
 			case State.d2Turn:
 				Debug.Log ("d2turn");
@@ -37,9 +38,11 @@ public class Gameplay : MonoBehaviour {
 				break;
 			case State.dWin:
 				Debug.Log ("dwin");
+				Message.PopUp ("Detectives win!", "Reset game");
 				break;
 			case State.mrXTurn:
 				Debug.Log ("mrxTurn");
+				Message.PopUp ("MrX wins!", "Reset game");
 				break;
 			default:
 				Debug.Log ("default");
@@ -54,8 +57,11 @@ public class Gameplay : MonoBehaviour {
 		                                             Camera.main.transform.position.z);
 	}
 
-	public Player getCurrentPlayer(){
-		return gameLogic.GameBoard.Players[currentPlayerId()];
+
+	public void TryMovePlayer(int nodeID, Vector3 position){
+		if (gameLogic.canMoveToNode (getCurrentPlayer (), nodeID)) {
+			gameLogic.GameBoard.Players[currentPlayerId()].moveGameObject(position);
+		}
 	}
 
 	public int currentPlayerId(){
@@ -71,5 +77,8 @@ public class Gameplay : MonoBehaviour {
 			default:
 				return 0;
 		}
+	}
+	public Player getCurrentPlayer(){
+		return gameLogic.GameBoard.Players[currentPlayerId()];
 	}
 }

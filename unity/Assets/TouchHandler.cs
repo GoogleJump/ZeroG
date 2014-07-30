@@ -24,10 +24,10 @@ public class TouchHandler : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast(inputPosition, Vector2.zero);
 
 			if (hit.collider != null) {
-				Debug.Log ("I'm hitting "+hit.collider.name);
-				if(hit.collider.name == "Detective"){
-					Detective d = hit.collider.gameObject.GetComponent<Detective>();
-					d.Select();
+				Debug.Log ("I'm hitting "+hit.collider.name.Substring(4));
+				int nodeID = int.Parse(hit.collider.name.Substring(4));
+				if(hit.collider.name.Substring(0,4) == "Node"){
+					gamePlay.TryMovePlayer(nodeID, hit.collider.bounds.center);
 				}
 
 				//Vector3 center = hit.collider.bounds.center;
@@ -39,6 +39,8 @@ public class TouchHandler : MonoBehaviour {
 //				if (d.isSelected() && alternateTouch){
 //					d.moveGameObject(inputPosition.x, inputPosition.y);
 //					d.Deselect();
+			//Detective d = hit.collider.gameObject.GetComponent<Detective>();
+			//d.Select();
 //				}
 //			}
 		}

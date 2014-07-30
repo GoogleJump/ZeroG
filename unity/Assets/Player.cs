@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Player : MonoBehaviour {
-	protected String _name;
-	protected int _id;
-	protected IDictionary<TransportType, int> _tickets = new Dictionary<TransportType, int>();
-	protected Node _location;
-	protected List<String> _moveLog;
+	public String _name;
+	public int _id;
+	public IDictionary<TransportType, int> _tickets = new Dictionary<TransportType, int>();
+	public Node Location;
+	public List<String> _moveLog;
 
 	void Start(){
 		//a hack because can't use virtual methods...
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour {
 	}
 	
 	public Node getLocation(){
-		return _location;
+		return Location;
 	}
 
 	public string getName(){
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour {
 	}
 	
 	public void setLocation(Node location){
-		_location = location;
+		Location = location;
 		_moveLog.Add(location.ToString());
 	}
 	
@@ -79,5 +79,10 @@ public class Player : MonoBehaviour {
 	
 	public int getMoveLogSize(){
 		return _moveLog.Count();
+	}
+
+	public void moveGameObject(Vector3 position){
+		//have to create new vector3, cannot just assign properties
+		transform.position = new Vector3 (position.x, position.y, transform.position.z); 
 	}
 }

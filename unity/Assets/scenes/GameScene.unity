@@ -1017,6 +1017,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa37bb1546d28b4b9956cfacf1c335b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
+  _id: 0
+  _moveLog: []
 --- !u!1 &212046755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +3968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameState: 0
   gameLogic: {fileID: 1685295281}
+  message: {fileID: 1260741730}
 --- !u!4 &1075710570
 Transform:
   m_ObjectHideFlags: 0
@@ -4273,6 +4277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa37bb1546d28b4b9956cfacf1c335b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
+  _id: 0
+  _moveLog: []
 --- !u!1 &1166692960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,6 +4553,45 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .100000001
   m_Center: {x: 0, y: 0}
+--- !u!1 &1260741728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1260741729}
+  - 114: {fileID: 1260741730}
+  m_Layer: 0
+  m_Name: Message
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260741729
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260741728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.74575806, y: -.536950171, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+--- !u!114 &1260741730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1260741728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1628e0a7b74190041b00c08aa29f5414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268950684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5984,6 +6030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70d384d4d8e9b24f8b7d8d77b2e3f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
+  _id: 0
+  _moveLog: []
 --- !u!1 &1568169281
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,6 +8286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa37bb1546d28b4b9956cfacf1c335b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: 
+  _id: 0
+  _moveLog: []
 --- !u!1 &2088269254
 GameObject:
   m_ObjectHideFlags: 0
