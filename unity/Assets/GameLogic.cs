@@ -131,7 +131,7 @@ public class GameLogic : MonoBehaviour {
 		return (player.getTickets(transportType) > 0);
 	}
 	
-	public bool checkWin(Dictionary<int, Player> players, out int winningPlayerId) {
+	public bool winnerExists(Dictionary<int, Player> players, out int winningPlayerId) {
 		foreach (Player player in players.Values){
 			if (player is Detective){
 				if (player.getLocation() == players[0].getLocation()){

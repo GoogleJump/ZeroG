@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Node {
+public class Node : MonoBehaviour{
 
 	public int Id { get; set; }
 	private HashSet<Node> _taxiEdges, _busEdges, _ugEdges; //.net 3.5 doesn't support iset<t>
