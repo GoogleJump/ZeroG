@@ -12,23 +12,27 @@ public class Player : MonoBehaviour {
 	public List<String> _moveLog;
 
 	void Start(){
-		//a hack because can't use virtual methods...
-		if (this.GetType () == typeof(Detective)) {
-						_tickets.Add (TransportType.taxi, 10);
-						_tickets.Add (TransportType.bus, 8);
-						_tickets.Add (TransportType.underground, 4);
-				} else {
-			_tickets.Add(TransportType.taxi, 4);
-			_tickets.Add(TransportType.bus, 3);
-			_tickets.Add(TransportType.underground, 3);
-			_tickets.Add(TransportType.blackCard, 2);
-				}
+
 	}
 
 	public void createPlayer(String name, int id){
 		_name = name;
 		_id = id;
 		_moveLog = new List<String>();
+	}
+
+	public void resetTickets(){
+		//a hack because can't use virtual methods...just change this to property of a player
+		if (this.GetType () == typeof(Detective)) {
+			_tickets[TransportType.taxi] = 10;
+			_tickets[TransportType.bus] = 8;
+			_tickets[TransportType.underground] = 4;
+		} else {
+			_tickets[TransportType.taxi] = 4;
+			_tickets[TransportType.bus] = 3;
+			_tickets[TransportType.underground] = 3;
+			_tickets[TransportType.blackCard] = 2;
+		}
 	}
 
 
@@ -83,6 +87,8 @@ public class Player : MonoBehaviour {
 
 	public void moveGameObject(Vector3 position){
 		//have to create new vector3, cannot just assign properties
+		Debug.Log ("pos: " + position);
+		Debug.Log ("old pos: " + transform.position);
 		transform.position = new Vector3 (position.x, position.y, transform.position.z); 
 	}
 }

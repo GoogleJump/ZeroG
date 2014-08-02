@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Message : MonoBehaviour {
 	private static Rect windowRect;
-	public static bool showWindow;
+	public bool showWindow;
 	private static string Title;
 	private static string Button;
 	private static int groupHeight = 100;
@@ -29,7 +29,7 @@ public class Message : MonoBehaviour {
 		}
 	}
 	
-	public static void PopUp (string title, string button){
+	public void PopUp (string title, string button){
 		Title = title;
 		Button = button;
 		showWindow = true;

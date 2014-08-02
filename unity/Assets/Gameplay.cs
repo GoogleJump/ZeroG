@@ -10,21 +10,18 @@ public class Gameplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		goToState (State.d1Turn);
-
 		//move players to proper locations
-		Debug.Log ("Node" + gameLogic.GameBoard.Players [0].Location.Id);
 		Node mrXNode = GameObject.Find("Node" + gameLogic.GameBoard.Players[0].Location.Id).GetComponent<Node>();
 		Node detective1Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[1].Location.Id).GetComponent<Node>();
 		Node detective2Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[2].Location.Id).GetComponent<Node>();
 		Node detective3Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[3].Location.Id).GetComponent<Node>();
 
-		//TODO: create new vector3's from x and y
 		gameLogic.GameBoard.Players[0].transform.position = mrXNode.transform.position;
 		gameLogic.GameBoard.Players[1].transform.position = detective1Node.transform.position;
 		gameLogic.GameBoard.Players[2].transform.position = detective2Node.transform.position;
-		gameLogic.GameBoard.Players[3].transform.position = detective3Node .transform.position;
+		gameLogic.GameBoard.Players[3].transform.position = detective3Node.transform.position;
 
+		goToState (State.d1Turn);
 	}
 	
 	// Main loop - Update is called once per frame
@@ -33,33 +30,37 @@ public class Gameplay : MonoBehaviour {
 	}
 
 	public void goToState(State state){
+		Debug.Log ("goto: " + state);
 		switch (state) {
 			case State.d1Turn:
 				Debug.Log ("d1turn");
 				centerCameraOnDetective(1);
-				Message.PopUp("Detective 1's turn...", "Ok");
+				message.PopUp("Detective 1's turn...", "Ok");
 				break;
 			case State.d2Turn:
 				Debug.Log ("d2turn");
 				centerCameraOnDetective(2);
-				Message.PopUp("Detective 2's turn...", "Ok");
+				message.PopUp("Detective 2's turn...", "Ok");
 				break;
 			case State.d3Turn:
 				Debug.Log ("d3turn");
 				centerCameraOnDetective(3);
-				Message.PopUp("Detective 3's turn...", "Ok");
+				message.PopUp("Detective 3's turn...", "Ok");
 				break;
 			case State.dLoss:
 				Debug.Log ("dloss");
-				Message.PopUp("Detectives lose...", "Reset game");
+				message.PopUp("Detectives lose...", "Reset game");
+				gameLogic.GameBoard.reset();
 				break;
 			case State.dWin:
 				Debug.Log ("dwin");
-				Message.PopUp ("Detectives win!", "Reset game");
+				message.PopUp ("Detectives win!", "Reset game");
 				break;
 			case State.mrXTurn:
 				Debug.Log ("mrxTurn");
-				Message.PopUp ("MrX's turn...", "Ok");
+				message.PopUp ("MrX's turn...", "Ok");
+				Node destination = gameLogic.AI.minMax(gameLogic.GameBoard, 0, 1).Players[0].Location;
+				TryMovePlayer(destination.gameObject);
 				break;
 			default:
 				Debug.Log ("default");
@@ -94,9 +95,18 @@ public class Gameplay : MonoBehaviour {
 	}
 
 
-	public void TryMovePlayer(int nodeID, Vector3 position){
-		if (gameLogic.canMoveToNode (getCurrentPlayer (), nodeID)) {
-			gameLogic.GameBoard.Players[currentPlayerId()].moveGameObject(position);
+	//public void TryMovePlayer(int nodeID, Vector3 position){
+	public void TryMovePlayer(GameObject node){
+		Node destination = node.GetComponent<Node>();
+		Vector3 position = node.GetComponent<Collider2D>().bounds.center;
+		Player currentPlayer = gameLogic.GameBoard.Players[currentPlayerId()];
+		Node source = currentPlayer.Location;
+	//	Node destination = gameLogic.GameBoard.Board[nodeID];
+		Debug.Log("TryMovePlayer " + destination.Id + " "+ position);
+		if (gameLogic.canMoveToNode (getCurrentPlayer(), destination.Id)) {
+			Debug.Log ("can move");
+			currentPlayer.moveGameObject(position);
+			currentPlayer.move(destination, destination.getTransportationConnection(source));
 		}
 
 		int winningPlayerId;

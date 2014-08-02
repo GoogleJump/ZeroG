@@ -19,12 +19,15 @@ public class GamePosition : MonoBehaviour {
 		for (int i = 1; i <= 199; ++i) {
 			Board.Add(i, GameObject.Find("Node" + i).GetComponent<Node>());
 		}
-		
 
+		reset();
+	}
+
+	public void reset(){
 		//Generate distinct starting locations
 		System.Random randomGenerator = new System.Random();
 		HashSet<int> randomLocations = new HashSet<int>();
-
+		
 		const int numberOfLocations = 4;
 		for (int i = 0; i < numberOfLocations; ++i) {
 			int possibleLocation = randomGenerator.Next(1,199);
@@ -33,10 +36,11 @@ public class GamePosition : MonoBehaviour {
 			}
 			randomLocations.Add(possibleLocation);
 		}
-
+		
 		int playerNumberCounter = 0;
 		foreach (int location in randomLocations) {
 			Players[playerNumberCounter].Location = Board[location];
+			Players[playerNumberCounter].resetTickets();
 			++playerNumberCounter;
 		}	
 	}

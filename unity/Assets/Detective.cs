@@ -16,10 +16,4 @@ public class Detective :  Player {
 	public bool isSelected(){
 		return selected;
 	}
-
-//	public void moveGameObject (float x, float y){
-//		transform.position = new Vector3 (x,y);
-//		Debug.Log ("x: " + x + "y: " + y);
-//		Debug.Log ("moved" );
-//	}
 }

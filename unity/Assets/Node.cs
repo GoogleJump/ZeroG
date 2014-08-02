@@ -5,6 +5,15 @@ using System.Collections.Generic;
 public class Node : MonoBehaviour{
 
 	public int Id;
+
+	//For AI, priorty queue
+	public double Priority;
+	public long InsertionIndex;
+	public int QueueIndex;
+	public Color Color;
+	public int Value;
+	public Node Parent;
+
 	private HashSet<Node> _taxiEdges, _busEdges, _ugEdges; //.net 3.5 doesn't support iset<t>
 
 	void Awake(){
@@ -57,13 +66,24 @@ public class Node : MonoBehaviour{
 		return allEdges;
 	}
 
+	//only called when player can make a move
+	public TransportType getTransportationConnection(Node originatingNode){
+		if(_taxiEdges.Contains(originatingNode)){
+			return TransportType.taxi;
+		}
+		if (_busEdges.Contains (originatingNode)){
+			return TransportType.bus;
+		}
+		if (_ugEdges.Contains (originatingNode)) {
+			return TransportType.underground;
+		}
+
+		//should only happen for mr x
+		return TransportType.blackCard;
+	}
+
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	
 	}
 }

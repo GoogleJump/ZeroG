@@ -126,6 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 108
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &14042031
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 15
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &19630587
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 64
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &27917755
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +297,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 65
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &32636720
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +354,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 101
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &49877893
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +411,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 57
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &68136826
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 107
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &77331149
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 68
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &78988239
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +582,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 109
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &93379331
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +639,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 131
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &97238899
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +696,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 35
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &119123066
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +854,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 140
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &147306903
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +911,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 127
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &151625297
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +968,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 33
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &151770560
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +1025,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 194
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &160401567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1082,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 59
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &163271741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 78
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &164290504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1196,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 193
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &167694480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 145
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &176859631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 72
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &199267758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1433,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 142
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &212828744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1490,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 16
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &214323199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1547,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 28
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &216337927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1604,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 13
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &225564384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1661,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 85
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &226224706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1718,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 132
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &254135645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1775,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 117
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &290111418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1832,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 188
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &290901639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1889,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 9
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &294637046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1946,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 186
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &318365208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,6 +2003,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 195
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &324479034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +2060,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 48
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &328461529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +2117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 18
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &330892446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,6 +2174,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 1
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &355472885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,6 +2231,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 198
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &368955463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,6 +2327,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 141
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &387892850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2384,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 158
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &403265487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2668,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 153
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &406430129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2725,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 34
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &416186925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2782,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 122
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &416884871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2839,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 164
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &436823956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,6 +2896,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 156
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &457139546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,6 +2953,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 58
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &476976996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,6 +3010,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 120
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &499660697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,6 +3067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 75
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &501879764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,6 +3124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 113
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &512114850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +3181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 133
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &516318545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,6 +3238,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 37
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &520373601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3055,6 +3295,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 169
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &541093570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3352,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 2
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &611428990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,6 +3409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 125
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &619260817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3466,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 45
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &629137111
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 92
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &666310582
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 88
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &667059130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3367,6 +3637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 47
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &676951569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3694,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 56
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &708069895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,6 +3751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 124
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &708448398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3523,6 +3808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 172
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &714235788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,6 +3865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 52
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &717281928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,6 +3922,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 96
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &725889008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3979,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 97
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &731430593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,6 +4036,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 154
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &774041631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,6 +4093,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 129
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &774291015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +4150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 36
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &808376208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3887,6 +4207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 111
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &810327095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,6 +4264,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 162
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &813718930
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,6 +4321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 31
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &835044894
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4378,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 116
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &870174040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,6 +4435,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 144
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &870697606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,6 +4492,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 126
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &873819992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4199,6 +4549,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 77
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &885587863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,6 +4606,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 79
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &904068208
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4663,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 42
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &932190832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4355,6 +4720,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 76
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &935827471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4777,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 173
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &959222939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,6 +4874,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 180
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &978031382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,6 +4931,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 29
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &999497366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4603,6 +4988,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 146
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1005570566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +5045,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 150
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1015924458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4707,6 +5102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 40
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1020707549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4759,6 +5159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 192
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1029945957
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,6 +5216,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 123
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1037806092
 GameObject:
   m_ObjectHideFlags: 0
@@ -4863,6 +5273,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 189
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1053903421
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,6 +5330,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 23
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1059520924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,6 +5387,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 50
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1062142286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,6 +5444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 197
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1064782956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5071,6 +5501,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 94
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1075710567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,6 +5600,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 62
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1120109318
 GameObject:
   m_ObjectHideFlags: 0
@@ -5217,6 +5657,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 5
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1123740360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5714,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 179
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1138517523
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,6 +5771,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 61
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1148107245
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,6 +5828,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 143
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1156948486
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,6 +5885,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 69
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1163971812
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +6008,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 14
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1170255035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5595,6 +6065,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 183
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1187157488
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,6 +6122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 66
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1193622217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5699,6 +6179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 138
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1218898435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,6 +6236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 196
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1232137466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5803,6 +6293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 3
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1251837343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +6350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 104
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1260741728
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,6 +6394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1628e0a7b74190041b00c08aa29f5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showWindow: 0
 --- !u!1 &1268950684
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +6447,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 73
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1269695938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6504,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 149
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1272081568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6050,6 +6561,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 25
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1282935224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6102,6 +6618,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 106
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1286494965
 GameObject:
   m_ObjectHideFlags: 0
@@ -6154,6 +6675,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 39
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1287341022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,6 +6732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 160
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1293131298
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,6 +6789,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 83
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1318070394
 GameObject:
   m_ObjectHideFlags: 0
@@ -6310,6 +6846,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 80
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1322882677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6362,6 +6903,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 110
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1328542246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6414,6 +6960,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 134
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1346582067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,6 +7017,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 148
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1364482891
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,6 +7074,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 135
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1371403373
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,6 +7131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 53
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1377740083
 GameObject:
   m_ObjectHideFlags: 0
@@ -6622,6 +7188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 87
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1390703356
 GameObject:
   m_ObjectHideFlags: 0
@@ -6674,6 +7245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 90
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1391367174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,6 +7302,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 155
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1394610214
 GameObject:
   m_ObjectHideFlags: 0
@@ -6828,6 +7409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 190
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1406626814
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,6 +7466,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 38
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1407379877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6932,6 +7523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 191
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1409995863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6984,6 +7580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 20
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1419226747
 GameObject:
   m_ObjectHideFlags: 0
@@ -7036,6 +7637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 199
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1424875282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7088,6 +7694,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 43
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1440077508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7140,6 +7751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 63
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1447987902
 GameObject:
   m_ObjectHideFlags: 0
@@ -7192,6 +7808,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 105
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1454833454
 GameObject:
   m_ObjectHideFlags: 0
@@ -7244,6 +7865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 99
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1481021307
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,6 +7922,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 119
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1489753911
 GameObject:
   m_ObjectHideFlags: 0
@@ -7348,6 +7979,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 67
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1491378452
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,6 +8036,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 27
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1497231568
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,6 +8093,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 30
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1502563336
 GameObject:
   m_ObjectHideFlags: 0
@@ -7504,6 +8150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 7
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1507850508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7556,6 +8207,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 112
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1516445227
 GameObject:
   m_ObjectHideFlags: 0
@@ -7608,6 +8264,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 157
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1539436207
 GameObject:
   m_ObjectHideFlags: 0
@@ -7660,6 +8321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 11
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1559286072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7712,6 +8378,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 166
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1566362672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7830,6 +8501,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 121
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1568419810
 GameObject:
   m_ObjectHideFlags: 0
@@ -7882,6 +8558,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 139
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1586229937
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,6 +8615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 130
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1589414393
 GameObject:
   m_ObjectHideFlags: 0
@@ -7986,6 +8672,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 70
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1602134005
 GameObject:
   m_ObjectHideFlags: 0
@@ -8038,6 +8729,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 71
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1603556112
 GameObject:
   m_ObjectHideFlags: 0
@@ -8090,6 +8786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 46
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1608129980
 GameObject:
   m_ObjectHideFlags: 0
@@ -8142,6 +8843,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 168
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1609769257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8194,6 +8900,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 152
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1617533226
 GameObject:
   m_ObjectHideFlags: 0
@@ -8246,6 +8957,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 159
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1623165004
 GameObject:
   m_ObjectHideFlags: 0
@@ -8298,6 +9014,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 60
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1634354267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8350,6 +9071,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 118
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1659345314
 GameObject:
   m_ObjectHideFlags: 0
@@ -8402,6 +9128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 161
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1660116286
 GameObject:
   m_ObjectHideFlags: 0
@@ -8454,6 +9185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 32
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1663723482
 GameObject:
   m_ObjectHideFlags: 0
@@ -8506,6 +9242,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 102
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1666174842
 GameObject:
   m_ObjectHideFlags: 0
@@ -8601,6 +9342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 114
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1681936992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8653,6 +9399,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 41
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1685295280
 GameObject:
   m_ObjectHideFlags: 0
@@ -8683,6 +9434,7 @@ MonoBehaviour:
   _boardNodesTextAsset: {fileID: 4900000, guid: f77edaec7f40c9a4bb18fa662893444c,
     type: 3}
   GameBoard: {fileID: 1666174844}
+  AI: {fileID: 2105506222}
 --- !u!4 &1685295282
 Transform:
   m_ObjectHideFlags: 0
@@ -8747,6 +9499,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 49
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1706382031
 GameObject:
   m_ObjectHideFlags: 0
@@ -8799,6 +9556,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 136
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1709060697
 GameObject:
   m_ObjectHideFlags: 0
@@ -8851,6 +9613,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 93
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1711775559
 GameObject:
   m_ObjectHideFlags: 0
@@ -8903,6 +9670,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 163
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1718393283
 GameObject:
   m_ObjectHideFlags: 0
@@ -8944,6 +9716,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 81
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!58 &1718393286
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9007,6 +9784,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 26
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1762437558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9059,6 +9841,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 167
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1784840738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9111,6 +9898,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 95
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1788102693
 GameObject:
   m_ObjectHideFlags: 0
@@ -9163,6 +9955,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 171
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1811451982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9215,6 +10012,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 100
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1815426211
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,6 +10069,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 82
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1826806023
 GameObject:
   m_ObjectHideFlags: 0
@@ -9319,6 +10126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 177
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1827157714
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,6 +10183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 137
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1833506035
 GameObject:
   m_ObjectHideFlags: 0
@@ -9423,6 +10240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 8
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1838686196
 GameObject:
   m_ObjectHideFlags: 0
@@ -9475,6 +10297,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 174
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1843365216
 GameObject:
   m_ObjectHideFlags: 0
@@ -9527,6 +10354,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 175
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1846572485
 GameObject:
   m_ObjectHideFlags: 0
@@ -9579,6 +10411,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 184
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1850822601
 GameObject:
   m_ObjectHideFlags: 0
@@ -9631,6 +10468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 185
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1853537901
 GameObject:
   m_ObjectHideFlags: 0
@@ -9683,6 +10525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 6
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1863550926
 GameObject:
   m_ObjectHideFlags: 0
@@ -9735,6 +10582,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 128
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1864938738
 GameObject:
   m_ObjectHideFlags: 0
@@ -9787,6 +10639,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 181
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1908305608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9839,6 +10696,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 22
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1908735819
 GameObject:
   m_ObjectHideFlags: 0
@@ -9891,6 +10753,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 103
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1926533606
 GameObject:
   m_ObjectHideFlags: 0
@@ -9943,6 +10810,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 151
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1930102536
 GameObject:
   m_ObjectHideFlags: 0
@@ -9995,6 +10867,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 165
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1936042312
 GameObject:
   m_ObjectHideFlags: 0
@@ -10047,6 +10924,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 74
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1977466362
 GameObject:
   m_ObjectHideFlags: 0
@@ -10099,6 +10981,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 170
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1984871639
 GameObject:
   m_ObjectHideFlags: 0
@@ -10151,6 +11038,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 44
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1986725908
 GameObject:
   m_ObjectHideFlags: 0
@@ -10203,6 +11095,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 176
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &1990968985
 GameObject:
   m_ObjectHideFlags: 0
@@ -10255,6 +11152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 147
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2004068933
 GameObject:
   m_ObjectHideFlags: 0
@@ -10307,6 +11209,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 21
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2016682015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10359,6 +11266,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 182
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2017580328
 GameObject:
   m_ObjectHideFlags: 0
@@ -10411,6 +11323,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 86
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2030768636
 GameObject:
   m_ObjectHideFlags: 0
@@ -10463,6 +11380,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 84
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2035055385
 GameObject:
   m_ObjectHideFlags: 0
@@ -10515,6 +11437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 89
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2041112075
 GameObject:
   m_ObjectHideFlags: 0
@@ -10567,6 +11494,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 115
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2045699260
 GameObject:
   m_ObjectHideFlags: 0
@@ -10619,6 +11551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 178
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2055461537
 GameObject:
   m_ObjectHideFlags: 0
@@ -10671,6 +11608,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 187
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2067302141
 GameObject:
   m_ObjectHideFlags: 0
@@ -10789,6 +11731,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 17
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2093554887
 GameObject:
   m_ObjectHideFlags: 0
@@ -10841,6 +11788,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 54
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2099218171
 GameObject:
   m_ObjectHideFlags: 0
@@ -10893,6 +11845,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 98
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2102142967
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,6 +11902,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 55
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
+--- !u!1 &2105506220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2105506221}
+  - 114: {fileID: 2105506222}
+  m_Layer: 0
+  m_Name: MinMax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105506221
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105506220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.34351063, y: -2.12682414, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+--- !u!114 &2105506222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105506220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e267dbd814fdb419c82a8187bf63f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLogic: {fileID: 1685295281}
 --- !u!1 &2106345670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10997,6 +11999,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 24
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2111390575
 GameObject:
   m_ObjectHideFlags: 0
@@ -11049,6 +12056,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 10
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2112009188
 GameObject:
   m_ObjectHideFlags: 0
@@ -11101,6 +12113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 100
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2114521945
 GameObject:
   m_ObjectHideFlags: 0
@@ -11153,6 +12170,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 91
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2118455935
 GameObject:
   m_ObjectHideFlags: 0
@@ -11205,6 +12227,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 4
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2123012008
 GameObject:
   m_ObjectHideFlags: 0
@@ -11257,6 +12284,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 12
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2133234508
 GameObject:
   m_ObjectHideFlags: 0
@@ -11309,6 +12341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 19
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}
 --- !u!1 &2139552018
 GameObject:
   m_ObjectHideFlags: 0
@@ -11361,3 +12398,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 51
+  Priority: 0
+  QueueIndex: 0
+  Color: 0
+  Value: 0
+  Parent: {fileID: 0}

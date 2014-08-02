@@ -47,13 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CameraMovement.cs" />
+     <Compile Include="Assets\Color.cs" />
      <Compile Include="Assets\Detective.cs" />
      <Compile Include="Assets\GameLogic.cs" />
      <Compile Include="Assets\GamePosition.cs" />
      <Compile Include="Assets\Gameplay.cs" />
      <Compile Include="Assets\GameplayGUI.cs" />
+     <Compile Include="Assets\HeapPriorityQueue.cs" />
+     <Compile Include="Assets\IPriorityQueue.cs" />
      <Compile Include="Assets\MainMenu.cs" />
      <Compile Include="Assets\Message.cs" />
+     <Compile Include="Assets\MinMax.cs" />
      <Compile Include="Assets\MrX.cs" />
      <Compile Include="Assets\Node.cs" />
      <Compile Include="Assets\Player.cs" />
