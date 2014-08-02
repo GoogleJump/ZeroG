@@ -2,13 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Node {
+public class Node : MonoBehaviour{
 
-	public int Id { get; set; }
+	public int Id;
+
+	//For AI, priorty queue
+	public double Priority;
+	public long InsertionIndex;
+	public int QueueIndex;
+	public Color Color;
+	public int Value;
+	public Node Parent;
+
 	private HashSet<Node> _taxiEdges, _busEdges, _ugEdges; //.net 3.5 doesn't support iset<t>
 
-	public Node(int id) {
-		Id = id;
+	void Awake(){
 		_taxiEdges = new HashSet<Node>();
 		_busEdges = new HashSet<Node>();
 		_ugEdges = new HashSet<Node>();
@@ -16,17 +24,17 @@ public class Node {
 	
 	public void addEdge(Node n, TransportType type) {
 		switch (type) {
-		case TransportType.taxi:
-			_taxiEdges.Add(n);
-			break;
-		case TransportType.bus:
-			_busEdges.Add(n);
-			break;
-		case TransportType.underground:
-			_ugEdges.Add(n);
-			break;
-		default:
-			break;
+			case TransportType.taxi:
+				_taxiEdges.Add(n);
+				break;
+			case TransportType.bus:
+				_busEdges.Add(n);
+				break;
+			case TransportType.underground:
+				_ugEdges.Add(n);
+				break;
+			default:
+				break;
 		}
 	}
 
@@ -58,13 +66,24 @@ public class Node {
 		return allEdges;
 	}
 
+	//only called when player can make a move
+	public TransportType getTransportationConnection(Node originatingNode){
+		if(_taxiEdges.Contains(originatingNode)){
+			return TransportType.taxi;
+		}
+		if (_busEdges.Contains (originatingNode)){
+			return TransportType.bus;
+		}
+		if (_ugEdges.Contains (originatingNode)) {
+			return TransportType.underground;
+		}
+
+		//should only happen for mr x
+		return TransportType.blackCard;
+	}
+
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	
 	}
 }
