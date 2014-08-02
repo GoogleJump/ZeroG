@@ -11,11 +11,12 @@ public class GameLogic : MonoBehaviour {
 	public GamePosition GameBoard;
 
 	void Awake(){
-		BuildMap();
+
 	}
 
 	// Use this for initialization
 	void Start () {
+		BuildMap();
 	}
 
 	public void BuildMap(){
@@ -47,10 +48,10 @@ public class GameLogic : MonoBehaviour {
 			
 			//check if nodes are already in board
 			if (!GameBoard.Board.ContainsKey(nodeID0)) {
-				GameBoard.Board.Add(nodeID0, new Node(nodeID0));
+				GameBoard.Board.Add(nodeID0, GameObject.Find("Node" + nodeID0).GetComponent<Node>());
 			}
 			if (!GameBoard.Board.ContainsKey(nodeID1)) {
-				GameBoard.Board.Add(nodeID1, new Node(nodeID1));
+				GameBoard.Board.Add(nodeID1, GameObject.Find("Node" + nodeID1).GetComponent<Node>());
 			}
 			
 			GameBoard.Board[nodeID0].addEdges(GameBoard.Board[nodeID1], connType);

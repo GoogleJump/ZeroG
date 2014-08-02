@@ -13,10 +13,11 @@ public class Gameplay : MonoBehaviour {
 		goToState (State.d1Turn);
 
 		//move players to proper locations
-		Node mrXNode = GameObject.Find ("Node" + gameLogic.GameBoard.Players[0].Location.Id).GetComponent<Node>();
-		Node detective1Node = GameObject.Find ("Node" + gameLogic.GameBoard.Players[1].Location.Id).GetComponent<Node>();
-		Node detective2Node = GameObject.Find ("Node" + gameLogic.GameBoard.Players[2].Location.Id).GetComponent<Node>();
-		Node detective3Node = GameObject.Find ("Node" + gameLogic.GameBoard.Players[3].Location.Id).GetComponent<Node>();
+		Debug.Log ("Node" + gameLogic.GameBoard.Players [0].Location.Id);
+		Node mrXNode = GameObject.Find("Node" + gameLogic.GameBoard.Players[0].Location.Id).GetComponent<Node>();
+		Node detective1Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[1].Location.Id).GetComponent<Node>();
+		Node detective2Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[2].Location.Id).GetComponent<Node>();
+		Node detective3Node = GameObject.Find("Node" + gameLogic.GameBoard.Players[3].Location.Id).GetComponent<Node>();
 
 		//TODO: create new vector3's from x and y
 		gameLogic.GameBoard.Players[0].transform.position = mrXNode.transform.position;

@@ -4,11 +4,10 @@ using System.Collections.Generic;
 
 public class Node : MonoBehaviour{
 
-	public int Id { get; set; }
+	public int Id;
 	private HashSet<Node> _taxiEdges, _busEdges, _ugEdges; //.net 3.5 doesn't support iset<t>
 
-	public Node(int id) {
-		Id = id;
+	void Awake(){
 		_taxiEdges = new HashSet<Node>();
 		_busEdges = new HashSet<Node>();
 		_ugEdges = new HashSet<Node>();
@@ -16,17 +15,17 @@ public class Node : MonoBehaviour{
 	
 	public void addEdge(Node n, TransportType type) {
 		switch (type) {
-		case TransportType.taxi:
-			_taxiEdges.Add(n);
-			break;
-		case TransportType.bus:
-			_busEdges.Add(n);
-			break;
-		case TransportType.underground:
-			_ugEdges.Add(n);
-			break;
-		default:
-			break;
+			case TransportType.taxi:
+				_taxiEdges.Add(n);
+				break;
+			case TransportType.bus:
+				_busEdges.Add(n);
+				break;
+			case TransportType.underground:
+				_ugEdges.Add(n);
+				break;
+			default:
+				break;
 		}
 	}
 
