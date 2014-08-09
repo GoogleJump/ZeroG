@@ -64,7 +64,9 @@
      <Compile Include="Assets\State.cs" />
      <Compile Include="Assets\TouchHandler.cs" />
      <Compile Include="Assets\TransportType.cs" />
+     <None Include="Assets\boardNodes2.txt" />
      <None Include="Assets\BoardNodes.txt" />
+     <None Include="Assets\BoardNodes3.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

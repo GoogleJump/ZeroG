@@ -60,7 +60,7 @@ public class Player : MonoBehaviour {
 	
 	public void setLocation(Node location){
 		Location = location;
-		_moveLog.Add(location.ToString());
+		_moveLog.Add(location.Id.ToString());
 	}
 	
 	public int getTickets(TransportType ticket){
