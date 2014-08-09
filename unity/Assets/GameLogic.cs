@@ -5,24 +5,20 @@ using System;
 using System.IO;
 using System.Linq;
 
-public class GameLogic : MonoBehaviour {
-	public TextAsset _boardNodesTextAsset;
+public class GameLogic {
 	readonly int MAX_MRX_MOVES = 24;
 	public GamePosition GameBoard;
-	public MinMax AI;
 
-	void Awake(){
-
+	public GameLogic(TextAsset nodeConnections, params Player[] players){
+		Debug.Log ("game logic ctor");
+		GameBoard = new GamePosition(players[0], players[1], players[2], players[3]);
+		BuildMap(nodeConnections);
 	}
+	
 
-	// Use this for initialization
-	void Start () {
-		BuildMap();
-	}
-
-	public void BuildMap(){
+	public void BuildMap(TextAsset nodeConnections){
 		//create array of strings to hold lines of text file
-		string [] lines = _boardNodesTextAsset.text.Split ("\n" [0]);
+		string [] lines = nodeConnections.text.Split ("\n" [0]);
 
 		foreach (string line in lines){
 			//split it into an an array of strings 
@@ -86,6 +82,7 @@ public class GameLogic : MonoBehaviour {
 	}
 
 	public bool canMoveToNode(Player player, int nodeID){
+		Debug.Log (player.Location.Id + " " + nodeID);
 		Node node = GameBoard.Board[nodeID];
 		if (playerOnNode (node)) {
 			return false;
@@ -101,7 +98,7 @@ public class GameLogic : MonoBehaviour {
 
 	public bool playerOnNode(Node node){
 		foreach (Player player in GameBoard.Players.Values) {
-			if (player.Location == node) {
+			if (player.Location == node && !(player is MrX)) {
 				return true;
 			}
 		}
@@ -111,7 +108,7 @@ public class GameLogic : MonoBehaviour {
 	public HashSet<Node> getAllOtherPlayerLocations(Player currentPlayer){
 		HashSet<Node> locations = new HashSet<Node>();
 		foreach (Player player in GameBoard.Players.Values){
-			if (player != currentPlayer){
+			if (player != currentPlayer && !(player is MrX)){
 				locations.Add(player.getLocation());
 			}
 		}
@@ -123,6 +120,9 @@ public class GameLogic : MonoBehaviour {
 		HashSet<TransportType> usableTickets = new HashSet<TransportType> ();
 		foreach(TransportType type in Enum.GetValues(typeof(TransportType))){
 			HashSet<Node> edges = current.getEdges(type);
+//			foreach(Node node in edges){
+//				Debug.Log (node.Id);
+//			}
 			if(edges.Contains(destination))
 				usableTickets.Add(type);
 		}
@@ -164,7 +164,9 @@ public class GameLogic : MonoBehaviour {
 	}
 	
 	public GamePosition ApplyMove(int player, Node move, GamePosition gamePosition){
-		GamePosition potentialResult = gamePosition;
+		int initialPlayerLocation = gamePosition.Players [player].Location.Id;
+		//Debug.Log ("initial plaeyr location: " + initialPlayerLocation);
+		GamePosition potentialResult = new GamePosition (gamePosition.Players);
 		HashSet<TransportType> possibleConnection = getPossibleConnectionTypes(potentialResult.Players[player].getLocation(), move);
 		
 		foreach (TransportType type in possibleConnection) {
@@ -173,25 +175,26 @@ public class GameLogic : MonoBehaviour {
 				break;
 			}
 		}
+		//Debug.Log ("moved player location: " + potentialResult.Players[player].Location.Id);
 		return potentialResult;
 	}
 	
-	public HashSet<Node> GetPossibleMoves(int player){
-		Node currentLocation = GameBoard.Players[player].getLocation();
+	public HashSet<Node> GetPossibleMoves(int player, GamePosition gamePosition){
+		Node currentLocation = gamePosition.Players[player].getLocation();
 		HashSet<Node> possibleLocations = new HashSet<Node>();
-		HashSet<Node> occupiedLocations = getAllOtherPlayerLocations(GameBoard.Players[player]);
+		HashSet<Node> occupiedLocations = getAllOtherPlayerLocations(gamePosition.Players[player]);
 		HashSet<Node> checkLocations;
 		
-		if(playerHasEnoughTickets(GameBoard.Players[player], TransportType.blackCard)){
+		if(playerHasEnoughTickets(gamePosition.Players[player], TransportType.blackCard)){
 			checkLocations = currentLocation.getAllEdges();
 			checkLocations.ExceptWith(occupiedLocations);
-			possibleLocations.Union(checkLocations);
+			possibleLocations = new HashSet<Node>(possibleLocations.Union(checkLocations));
 		} else {
 			foreach(TransportType type in Enum.GetValues(typeof(TransportType))){
-				if(playerHasEnoughTickets(GameBoard.Players[player], type)){
+				if(playerHasEnoughTickets(gamePosition.Players[player], type)){
 					checkLocations = currentLocation.getEdges(type);
 					checkLocations.ExceptWith(occupiedLocations);
-					possibleLocations.Union(checkLocations);
+					possibleLocations = new HashSet<Node>(possibleLocations.Union(checkLocations));				
 				}
 			}
 		}
